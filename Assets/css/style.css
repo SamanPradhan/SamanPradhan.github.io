@@ -193,24 +193,24 @@ svg {
   .nav--menu {
     position: fixed;
     top: 0;
-    right: -100%;
     background-color: hsla(0, 0%, 10%, .3);
+    right: -100%;
     width: 75%;
-    height: 100%;
+    height: 100%;transition: right 0.5s;
     padding: 4.5rem 0 0 3rem;
-    backdrop-filter: blur(30px);
+
     --webkit-backdrop-filter: blur(30px) /*(safary broweser)*/
-    transition: right 0.5s;
+    backdrop-filter: blur(30px);
   }
   .nav--list {
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
   }
-  .nav--link{
+  .nav--link{transition: color .5s;
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: color .5s;
+    
   }
   .nav--link{
     position: absolute;
@@ -230,9 +230,9 @@ svg {
 .home{
     background-color: var(--container-color);
 }
-.home--container{
+.home--container{row-gap: 2.5rem;
     padding-top: 2rem;
-    row-gap: 2.5rem;
+    
 }
 
 .home--content{
@@ -250,6 +250,46 @@ svg {
 
 .home--subtitle span, .home--title{
     color: var(--first-color);
+}
+
+.home--title{
+    font-size: var(--bigger-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.home--description{
+    margin-block: 1.1rem, 1.6rem;
+}
+.home--social{
+    column-gap: 1.33rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.home--social--link{
+    padding: .45rem;
+    display: flex;
+    color: var(--title-color);
+    background-color: var(--first-color-alt);
+    
+   font-size: 1.53rem;
+   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+   transition: trasform .4s;
+}
+
+.home--social--link:hover{
+    transform:translate(-.25rem);
+}
+
+.home--image{
+    justify-self: center;
+}
+
+.home--blob{
+    width: 320px;
+    fill: var(--first-color);
+    filter: drop-shadow(0 12px 12px hsla(var(--hue
+    ),100%,40%,.2));
 }
 /*=============== BUTTON ===============*/
 
