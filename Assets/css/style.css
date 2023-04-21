@@ -227,7 +227,30 @@ svg {
 /* Active link */
 
 /*=============== HOME ===============*/
+.home{
+    background-color: var(--container-color);
+}
+.home--container{
+    padding-top: 2rem;
+    row-gap: 2.5rem;
+}
 
+.home--content{
+    display: grid;
+    row-gap: 2rem;
+}
+
+.home--data{
+    text-align: center;
+}
+
+.home--subtitle,.home--education{
+    font-size: var(--bigger-font-size);
+}
+
+.home--subtitle span, .home--title{
+    color: var(--first-color);
+}
 /*=============== BUTTON ===============*/
 
 /*=============== ABOUT ===============*/
