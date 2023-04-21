@@ -131,24 +131,24 @@ svg {
   padding-block: 5rem 2rem;
 }
 
-.section__title,
-.section__subtitle {
+.section--title,
+.section--subtitle {
   text-align: center;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
 
-.section__title {
+.section--title {
   font-size: var(--h1-font-size);
   margin-bottom: 1.5rem;
 }
 
-.section__subtitle {
+.section--subtitle {
   font-size: var(--small-font-size);
   margin-bottom: 0.25rem;
 }
 
-.section__subtitle span {
+.section--subtitle span {
   color: var(--first-color);
 }
 
@@ -193,13 +193,13 @@ svg {
   .nav--menu {
     position: fixed;
     top: 0;
-    right: -99%;
-    background-color: hsla(0, 0%, 13%, 0.4);
+    right: -100%;
+    background-color: hsla(0, 0%, 10%, .3);
     width: 75%;
     height: 100%;
     padding: 4.5rem 0 0 3rem;
     backdrop-filter: blur(30px);
-    /* --webkit-backdrop-filter: blur(30px) (safary broweser) */
+    --webkit-backdrop-filter: blur(30px) /*(safary broweser)*/
     transition: right 0.5s;
   }
   .nav--list {
@@ -207,9 +207,21 @@ svg {
     flex-direction: column;
     row-gap: 3rem;
   }
+  .nav--link{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: color .5s;
+  }
+  .nav--link{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
 }
 /* Show menu */
-
+.show-menu {
+  right: 0;
+}
 /* Add blur to header */
 
 /* Active link */
