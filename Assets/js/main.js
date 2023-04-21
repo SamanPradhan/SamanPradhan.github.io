@@ -1,13 +1,13 @@
-/*=============== SHOW MENU ===============*/
+/* show menu */
 
-/*=============== REMOVE MENU MOBILE ===============*/
+/* remove menu mobile */
 
-/*=============== ADD BLUR TO HEADER ===============*/
+/* add blur to header  */
 
-/*=============== EMAIL JS ===============*/
+/* email js */
 
-/*=============== SHOW SCROLL UP ===============*/
+/* show scroll up */
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/* scroll sections active link */
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/* scroll reveal animation */

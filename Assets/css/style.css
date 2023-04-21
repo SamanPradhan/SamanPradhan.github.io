@@ -165,8 +165,49 @@ svg {
   left: 0;
   z-index: var(--z-fixed);
 }
-/* Navigation for mobile devices */
 
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav--logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.nav--logo span {
+  color: var(--first-color);
+}
+
+.nav--toggle,
+.nav--close {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+/* Navigation for mobile devices */
+@media screen and (max-width: 1000px) {
+  .nav--menu {
+    position: fixed;
+    top: 0;
+    right: -99%;
+    background-color: hsla(0, 0%, 13%, 0.4);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    backdrop-filter: blur(30px);
+    /* --webkit-backdrop-filter: blur(30px) (safary broweser) */
+    transition: right 0.5s;
+  }
+  .nav--list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+}
 /* Show menu */
 
 /* Add blur to header */
