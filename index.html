@@ -21,8 +21,8 @@
     <!---- header -->
     <header class="header" id="header">
         <nav class="nav container" id="nav-menu">
-            <a href="#" calss="nav-logo">
-                Saman Ranjan <span>Pradhan</span>
+            <a href="#" calss="nav-logo" class="home-title">
+                <span>Saman Ranjan </span>Pradhan
             </a>
             <div class="nav-menu" id="nav-menu ">
                 <ul class="nav-list">
@@ -99,7 +99,9 @@
 
                         <a href="" target="_blank " class="home-social-link" id="contact-email">
                             <i class="ri-phone-line"></i>
-                        </a> <a href="https://www.behance.net/samanpradhan" target="_blank " class="home-social-link"
+                        </a>
+
+                        <a href="https://www.behance.net/samanpradhan" target="_blank " class="home-social-link"
                             id="contact-behance">
                             <i class="ri-behance-line"></i>
                         </a>
@@ -162,7 +164,7 @@
                     <a href="#contact" class="button">Contact Me</a>
                 </div>
 
-                <div class="about-image">
+                <div id="about-section-here" class="about-image">
                     <svg class="about-blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="maskBorder" mask-type="alpha">
                             <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
@@ -338,9 +340,29 @@
                 </article>
             </div>
         </section>
+        <div class="github-data" id="github-data">
+
+
+            <div>
+                <img id="github-streak-stats" alt="7oSkaaa's Github Stats"
+                    src="https://github-readme-streak-stats.herokuapp.com/?user=SamanPradhan&count_private=true&show_icons=true&custom_title=Github&theme=algolia&hide_border=true&bg_color=0,000000,130F40&layout=compact&border_radius=10" />
+
+            </div>
+
+
+            <div>
+                <img id="github-stats-card" alt="status github, commits, etc..."
+                    src="https://github-readme-stats.vercel.app/api?username=SamanPradhan&show_icons=true&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=10&hide_border=true">
+            </div>
+
+
+
+            <img id="github-top-langs" alt="most used languages"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=SamanPradhan&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8&hide_border=true&langs_count=20&hide=hack,swift,kotlin,objective-c" />
+        </div>
 
         <!-- contact -->
-        <section class="contact section" id="contact">
+        <section class="contacts section" id="contact">
             <h3 class="section-subtitle">
                 Get In <span>Touch</span>
             </h3>
@@ -349,18 +371,21 @@
                 Contact Me
             </h2>
 
-            <div class="contact-container container grid">
-                <form action="" class="contact-form" id="contact-form">
-                    <div class="contact-group">
-                        <input type="text" name="user_name" required placeholder="Enter your name">
-                        <input type="text" name="user_email" required placeholder="Enter your email">
+            <div class="contacts-container container grid">
+                <form action="" class="contacts-form" id="contact-form">
+                    <div class="contacts-group">
+                        <input class="contacts-input" type="text" name="user_name" required
+                            placeholder="Enter your name">
+                        <input class="contacts-input" type="text" name="user_email" required
+                            placeholder="Enter your email">
 
                     </div>
-                    <textarea name="user_project" id="" required placeholder="Enter your message"></textarea>
+                    <textarea class="contacts-input" name="user_project" id="" required
+                        placeholder="Enter your message"></textarea>
 
-                    <p class=" contact-message" id="contact-message"></p>
+                    <p class=" contacts-message" id="contact-message"></p>
 
-                    <button type="submit" class="button contact-button">Send Message</button>
+                    <button type="submit" class="button contacts-button">Send Message</button>
                 </form>
             </div>
         </section>
@@ -368,7 +393,34 @@
 
     <!-- footer -->
     <footer class="footer">
+        <div class="footer-container container grid">
+            <div>
+                <h1 class="footer-title">
+                    Saman Ranjan <span>Pradhan</span>
 
+                </h1>
+                <h2 class="footer-education">
+                    Backend Developer
+                </h2>
+            </div>
+
+            <div class="diff-foor-main">
+
+                <a href="https://github.com/SamanPradhan" target="_blank " id="foot1" class="diffFoor">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/samanpradhan/" target="_blank " class="diffFoor" id="foot2">
+                    <i class="ri-linkedin-box-line"></i>
+                </a>
+                <a href="https://www.behance.net/samanpradhan" target="_blank " class="diffFoor" id="foot3" class="">
+                    <i class="ri-behance-line"></i>
+                </a>
+
+            </div>
+            <span class="footer-copy">
+                &#169;Copyright SamanPradhan. All rights reserved
+            </span>
+        </div>
     </footer>
 
     <!--= scroll up-->

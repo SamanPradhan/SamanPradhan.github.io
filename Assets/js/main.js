@@ -52,10 +52,39 @@ let sendEmail = (e) => {
 
   //
 
-  emailjs.
+  emailjs
+    .sendForm(
+      "service_dnlxkel",
+      "template_eegglwc",
+      "#contact-form",
+      "s3Vn3KSzGFdnKgH7G"
+    )
+    .then(
+      () => {
+        //show sent msg
+        contactMessage.textContent = "Message sent successfully ✅";
+
+        //remove msg after few time
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 6000);
+
+        //remove the input text
+
+        contactForm.reset();
+      },
+      () => {
+        //show error msg
+        contactMessage.textContent = "Message not sent(service error)❌";
+        //remove msg after few time
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 6000);
+      }
+    );
 };
 
-contactForm.add("submit", sendEmail);
+contactForm.addEventListener("submit", sendEmail);
 /* show scroll up */
 
 /* scroll sections active link */
