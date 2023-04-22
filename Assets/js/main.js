@@ -11,6 +11,7 @@ console.log(navClose);
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
+
     console.log("role");
   });
 }
@@ -21,6 +22,8 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    // let c = document.querySelector(".show-menu");
+    // c.style.right = "-100%";
     console.log("role");
   });
 }
