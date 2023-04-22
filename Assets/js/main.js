@@ -28,11 +28,20 @@ let linkhere = () => {
   //when click on nav--link, we remove the show-menu class
 
   navMenu.classList.remove("show-menu");
-
-  navLink.forEach((n) => n.addEventListener("click", linkhere));
 };
-/* add blur to header  */
+navLink.forEach((n) => n.addEventListener("click", linkhere));
 
+/* add blur to header  */
+let blurHeader = () => {
+  let header = document.getElementById("header");
+
+  //when scroll is gerater than 50 view port height
+
+  this.scrollY >= 50
+    ? header.classList.add("blur-header")
+    : header.classList.remove("blur-header");
+};
+window.addEventListener("scroll", blurHeader);
 /* email js */
 
 /* show scroll up */
