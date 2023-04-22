@@ -21,11 +21,11 @@ if (navClose) {
   });
 }
 /* remove menu mobile */
-let navLink = document.querySelectorAll(".nav--link");
+let navLink = document.querySelectorAll(".nav-link");
 
 let linkhere = () => {
   let navMenu = document.getElementById("nav-menu");
-  //when click on nav--link, we remove the show-menu class
+  //when click on nav-link, we remove the show-menu class
 
   navMenu.classList.remove("show-menu");
 };

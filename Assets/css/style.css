@@ -131,24 +131,24 @@ svg {
   padding-block: 5rem 2rem;
 }
 
-.section--title,
-.section--subtitle {
+.section-title,
+.section-subtitle {
   text-align: center;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
 
-.section--title {
+.section-title {
   font-size: var(--h1-font-size);
   margin-bottom: 1.5rem;
 }
 
-.section--subtitle {
+.section-subtitle {
   font-size: var(--small-font-size);
   margin-bottom: 0.25rem;
 }
 
-.section--subtitle span {
+.section-subtitle span {
   color: var(--first-color);
 }
 
@@ -173,16 +173,16 @@ svg {
   align-items: center;
 }
 
-.nav--logo {
+.nav-logo {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
-.nav--logo span {
+.nav-logo span {
   color: var(--first-color);
 }
 
-.nav--toggle,
-.nav--close {
+.nav-toggle,
+.nav-close {
   display: flex;
   font-size: 1.25rem;
   color: var(--title-color);
@@ -190,7 +190,7 @@ svg {
 }
 /* Navigation for mobile devices */
 @media screen and (max-width: 1000px) {
-  .nav--menu {
+  .nav-menu {
     position: fixed;
     top: 0;
     background-color: hsla(0, 0%, 10%, .3);
@@ -202,17 +202,17 @@ svg {
     --webkit-backdrop-filter: blur(30px) /*(safary broweser)*/
     backdrop-filter: blur(30px);
   }
-  .nav--list {
+  .nav-list {
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
   }
-  .nav--link{transition: color .5s;
+  .nav-link{transition: color .5s;
     color: var(--title-color);
     font-weight: var(--font-medium);
     
   }
-  .nav--link{
+  .nav-link{
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -244,34 +244,34 @@ svg {
 .home{
     background-color: var(--container-color);
 }
-.home--container{row-gap: 2.5rem;
+.home-container{row-gap: 2.5rem;
     padding-top: 2rem;
     
 }
 
-.home--content{
+.home-content{
     display: grid;
     row-gap: 2rem;
 }
 
-.home--data{
+.home-data{
     text-align: center;
 }
 
-.home--subtitle,.home--education{
+.home-subtitle,.home-education{
     font-size: var(--bigger-font-size);
 }
 
-.home--subtitle span, .home--title{
+.home-subtitle span, .home-title{
     color: var(--first-color);
 }
 
-.home--title{
+.home-title{
     font-size: var(--bigger-font-size);
     font-weight: var(--font-semi-bold);
 }
 
-.home--description{
+.home-description{
     margin-block: 1.1rem, 1.6rem;
 }
 .home--social{
@@ -280,7 +280,7 @@ svg {
     justify-content: center;
     
 }
-.home--social--link{
+.home-social-link{
     padding: .45rem;
     display: flex;
     color: var(--title-color);
@@ -291,22 +291,22 @@ svg {
    transition: trasform .4s;
 }
 
-.home--social--link:hover{
+.home-social-link:hover{
     transform:translate(-.25rem);
 }
 
-.home--image{
+.home-image{
     justify-self: center;
 }
 
-.home--blob{
+.home-blob{
     width: 320px;
     fill: var(--first-color);
     filter: drop-shadow(0 12px 12px hsla(var(--hue
     ),100%,40%,.2));
 }
 
-/* .home--img{
+/* .home-img{
     width: 900px;
     transform: translateX(-120px);
 } */
@@ -325,26 +325,26 @@ svg {
     box-shadow: 0 8px 24px hsla(var(--hue),100%,40%,.25);
 }
 /*  ABOUT */
-.about--container{
+.about-container{
     row-gap: 2.5rem;
 }
-.about--data{
+.about-data{
     text-align: center;
 }
 
-.about--description{
+.about-description{
     margin-bottom: 2rem;
 }
 
-.aobut--image{
+.aobut-image{
     justify-self: center;
 }
 
-.about--blob{
+.about-blob{
     width: 320px;
 }
 
-.about--blob path{
+.about-blob path{
     stroke: var(--first-color)
 }
 /*  SKILLS  */
@@ -353,25 +353,25 @@ svg {
 
 }
 
-.skills--container{
+.skills-container{
     padding-bottom: 2rem;
     row-gap: 3.6rem;
 
 }
 
-.skills--data{
+.skills-data{
     text-align: center;
 }
 
-/* .skills--description{
+/* .skills-description{
     margin-bottom: 2.2rem;
 } */
 
-.skills--content,
-.skills--group{
+.skills-content,
+.skills-group{
     display: grid;
 }
-.skills--content{
+.skills-content{
     grid-template-columns: repeat(2, max-content);
     column-gap:4.2rem;
     justify-content: center;
@@ -379,46 +379,46 @@ svg {
 }
 
 
-.skills--group{
+.skills-group{
     row-gap: 1rem;
     list-style: decimal-leading-zero;
 }
 
 
-.skills--item{
+.skills-item{
     font-weight: var(--font-medium);
     color: var(--title-color);
 }
 
-.skills--item::marker{
+.skills-item::marker{
     color: var(--first-color);
 }
 /*  SERVICES  */
 
 /*  PROJECTS  */
-.projects{
+.project{
     background-color: var(--container-color);
 }
 
-.projects--container{
+.project-container{
     row-gap: 2rem;
     justify-content: center;
     padding-block: 1rem;
 }
 
-.projects--card{
+.project-card{
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
 }
 
-.projects--img{
+.project-img{
     width: 100%;
     height: 100%;
 }
 
 
-.projects--modal{
+.project-modal{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -436,77 +436,83 @@ svg {
     transition: bottom .5s;
 }
 
-.projects--subtitle,
-.projects--button{
+.project-subtitle,
+.project-button{
     color: var(--title-color);
     font-size: var(--small-font-size);
 }
 
 
-.projects--subtitle{
+.project-subtitle{
     display: block;
     margin-bottom: .25rem;
 }
 
 
-.projects--title{
+.project-title{
     font-size: var(--h2-font-size);
     margin-bottom: .75rem;
 }
 
-.projects--button{
+.project-button{
     display: flex;
     align-items: center;
     column-gap: .5rem;
     font-weight: var(--font-medium);
 }
 
-.projects--button i{
+.project-button i{
     font-size: 1.25rem;
 }
 
-.projects--card:hover .projects--modal{
+.project-card:hover .project-modal{
     bottom: 0;
 }
 /*  CONTACT  */
-.contact--container{
+.contact-container{
     padding-top: 1rem;
 
 }
 
-.contact--form,
-.contact--group{
+.contact-form,
+.contact-group{
     display: grid;
     row-gap: 1rem;
 }
 
-.contact--form{
+.contact-form{
 position: relative;
 }
 
 
-.contact--input{
+.contact-input{
     padding: 1rem 1.25rem;
     border-radius: .5rem;
     background-color: var(--container-color);
     color: var(--title-color);
 }
 
-.contact--input::placeholder{
+.contact-input::placeholder{
     color: var(--text-color);
 }
 
-.contact--form textarea{
+.contact-form textarea{
     height: 11rem;
     resize: none;
     margin-bottom: 2rem;
 }
 
-.contact--button{
+.contact-button{
     justify-self: center;
     cursor: pointer;
 }
-
+ 
+.contact-message{
+    position: absolute;
+    left: 0;
+    bottom: 4.5rem;
+    font-size: var(--small-font-size);
+}
 /*  FOOTER */
 
 /*  SCROLL BAR  */
