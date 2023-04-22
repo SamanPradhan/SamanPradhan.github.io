@@ -2,9 +2,12 @@
 let navMenu = document.getElementById("nav-menu");
 let navToggle = document.getElementById("nav-toggle");
 let navClose = document.getElementById("nav-close");
-
+console.log(navMenu);
+console.log(navToggle);
+console.log(navClose);
 // menu showing
-// validate if the toggle here\
+// validate if the toggle here
+
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
@@ -14,13 +17,16 @@ if (navToggle) {
 
 //menu hiding
 //validate if the toggle here
+
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
     console.log("role");
   });
 }
+
 /* remove menu mobile */
+
 let navLink = document.querySelectorAll(".nav-link");
 
 let linkhere = () => {
@@ -44,6 +50,7 @@ let blurHeader = () => {
 window.addEventListener("scroll", blurHeader);
 
 /* email js */
+
 let contactForm = document.getElementById("contact-form");
 let contactMessage = document.getElementById("contact-message");
 
@@ -85,8 +92,40 @@ let sendEmail = (e) => {
 };
 
 contactForm.addEventListener("submit", sendEmail);
+
 /* show scroll up */
 
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);
+
 /* scroll sections active link */
+
+// const sections = document.querySelectorAll("section[id]");
+
+// const scrollActive = () => {
+//   const scrollY = window.pageYOffset;
+
+//   sections.forEach((current) => {
+//     const sectionHeight = current.offsetHeight,
+//       sectionTop = current.offsetTop - 58,
+//       sectionId = current.getAttribute("id"),
+//       sectionsClass = document.querySelector(
+//         ".nav__menu a[href*=" + sectionId + "]"
+//       );
+
+//     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//       sectionsClass.classList.add("active-link");
+//     } else {
+//       sectionsClass.classList.remove("active-link");
+//     }
+//   });
+// };
+// window.addEventListener("scroll", scrollActive);
 
 /* scroll reveal animation */
