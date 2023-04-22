@@ -42,8 +42,20 @@ let blurHeader = () => {
     : header.classList.remove("blur-header");
 };
 window.addEventListener("scroll", blurHeader);
-/* email js */
 
+/* email js */
+let contactForm = document.getElementById("contact-form");
+let contactMessage = document.getElementById("contact-message");
+
+let sendEmail = (e) => {
+  e.preventDefault();
+
+  //
+
+  emailjs.
+};
+
+contactForm.add("submit", sendEmail);
 /* show scroll up */
 
 /* scroll sections active link */

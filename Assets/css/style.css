@@ -274,7 +274,7 @@ svg {
 .home-description{
     margin-block: 1.1rem, 1.6rem;
 }
-.home--social{
+.home-social{
     column-gap: 1.33rem;
     display: flex;
     justify-content: center;
@@ -285,7 +285,7 @@ svg {
     display: flex;
     color: var(--title-color);
     background-color: var(--first-color-alt);
-    
+    /* width :5%; */
    font-size: 1.53rem;
    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
    transition: trasform .4s;
@@ -512,6 +512,7 @@ position: relative;
     left: 0;
     bottom: 4.5rem;
     font-size: var(--small-font-size);
+    color: var(--title-color);
 }
 /*  FOOTER */
 
