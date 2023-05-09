@@ -3,344 +3,183 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="assets/img/faviconsss.png" type="image/x-icon">
-
-    <!-- REMIXICONS -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- CSS -->
+    <meta name="keywords"
+        content=" Saman Ranjan Pradhan, portfolio, Saman Ranjan Pradhan, personal portfolio life codes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Saman's Portfolio. Node Backend Developer" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./Assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
 
-    <title>Responsive portfolio website - Bedimcode</title>
+    <!-- Favicon -->
+
+    <link id='favicon' rel="shortcut icon"
+        href="https://th.bing.com/th/id/R.cda3b7d73ea9d27ebc57e69796622b87?rik=RBze9cBJjorqcA&riu=http%3a%2f%2fwww.icons101.com%2ficon_png%2fsize_512%2fid_32956%2fSb.png&ehk=8RXWPvUn08MryrnrIUwVTerw1MK%2fLsSOn6T2Qy7ED4E%3d&risl=&pid=ImgRaw&r=0"
+        type="image/x-png">
+    <title>Portfolio | Saman Ranjan Pradhan</title>
+    <script src="https://unpkg.com/eva-icons"></script>
 </head>
 
 <body>
-    <!---- header -->
-    <header class="header" id="header">
-        <nav class="nav container" id="nav-menu">
-            <a href="#" calss="nav-logo" class="home-title">
-                <span>Saman Ranjan </span>Pradhan
-            </a>
-            <div class="nav-menu" id="nav-menu ">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link home" id="home">Home</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link about" class="about section" id="about">About</a>
-                    </li>
+    <video style="background-color: rgba(0, 0, 0, 0.5);" class="back-video" autoplay loop muted
+        src="./Assets/images/pexels-mikhail-nilov-6963744-1920x1080-25fps.mp4"></video>
 
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link skills" id="skills">Skills</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link projects" id="projects">Projects</a>
-                    </li>
+    <!-- navbar starts -->
+    <header>
+        <a href="/" class="logo">Saman Ranjan Pradhan</a>
 
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link contact" id="contact">Contact</a>
-                    </li>
-                </ul>
-                <!-- close it by button -->
-                <div class="nav-close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-            <!-- toggle button here -->
-            <div class="nav-toggle" id="nav-toggle">
-                <i class="ri-menu-line"></i>
-            </div>
+        <div id="menu" style="color: white;" class="fas fa-bars"></div>
+        <nav id="nav-menu" class="navbar">
+            <ul>
+                <li><a class="active nav-link home" href="#home">Home</a></li>
+                <li><a class="nav-link about" href="#about">About</a></li>
+                <li><a class="nav-link skills" href="#skills">Skills</a></li>
+                <li><a class="nav-link projects" href="#projects">Work</a></li>
+                <li><a class="nav-link contact" href="#contact">Contact</a></li>
+                <!-- https://drive.google.com/file/d/1Nn2dEMxg_ZvXJR10Kd7J1P-fu54Umrjz/view?usp=sharing -->
+                <li><button id="resume-button-1">
+                        <a id="resume-link-1" href="Assets/Saman_Pradhan_resume.pdf" download
+                            onclick="window.open(`Assets/Saman_Pradhan_resume.pdf)"
+                            class="btn nav-link resume"><span>Resume </span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </button></li>
+            </ul>
         </nav>
     </header>
+    <!-- navbar ends -->
 
-    <!--  main  -->
-    <main class="main">
-        <!-- home  -->
-        <section class="home section" id="home">
-            <div class="home-container container grid">
-                <div class="home-content">
-                    <div class="home-data">
-                        <h3 class="home-subtitle">
-                            Hello, <span>I'm</span>
-                        </h3>
-                        <h1 class="home-title" id="user-detail-name">Saman Ranjan Pradhan</h1>
-                        <h3 class="home-education">Back End Developer</h3>
-                        <p class="home-description" id="user-detail-intro">
-                            A curious Node Backend Developer with ample skills in frontend Web Development and Web
-                            Designing. Highly trained in NodeJS, ExpressJS, HTML, CSS & advance JavaScript concepts, and
-                            has keen interst in Data Structures and Algorithms.
-                        </p>
+    <!--  -->
+    <!-- hero section starts -->
+    <section class="home2" id="home">
+        <!-- <div id="particles-js">
+      
 
-                        <a href="#contact" class="button">let's have a chat</a>
-                    </div>
+    </div> -->
 
-                    <div class="home-social">
-                        <a href="https://github.com/SamanPradhan" target="_blank " class="home-social-link"
-                            id="contact-github">
-                            <i class="ri-github-fill"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/samanpradhan/" target="_blank " class="home-social-link"
-                            id="contact-linkedin">
-                            <i class="ri-linkedin-box-line"></i>
-                        </a>
-
-
-                        <a href="mailto:pradhansaman2017@gmail.com" target="_blank " class="home-social-link"
-                            id="contact-phone">
-                            <i class="ri-mail-line"></i>
-                        </a>
+        <div class="content">
+            <h2 id="nameHead">Hi There,<br /> I'm Saman Ranjan <span id="nameTale">Pradhan</span></h2>
+            <p>i am into <span class="typing-text"></span></p>
+            <a href="#about" class="btn"><span>About Me</span>
+                <i class="fas fa-arrow-circle-down"></i>
+            </a>
+            <!-- <div class="socials">
+                <ul class="social-icons">
+                    <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/samanpradhan/"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a class="github" aria-label="GitHub" href="https://github.com/SamanPradhan" target="_blank"><i
+                                class="fab fa-github"></i></a></li>
+                </ul>
+            </div> -->
+        </div>
+        <!-- <div class="image">
+            <img draggable="false" class="tilt" id="new23"
+                src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt=""
+                style="border-radius: 20%;">
+        </div> -->
+    </section>
+    <!-- hero section ends -->
 
 
-                        <a href="" target="_blank " class="home-social-link" id="contact-email">
-                            <i class="ri-phone-line"></i>
-                        </a>
+    <!-- about section starts -->
+    <section class="about about2 section" id="about">
+        <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
 
-                        <a href="https://www.behance.net/samanpradhan" target="_blank " class="home-social-link"
-                            id="contact-behance">
-                            <i class="ri-behance-line"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="home-image">
-                    <svg class="home-blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="maskBlob" mask-type="alpha">
-                            <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-                           170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-                           447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-                           587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-                           438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
-                        </mask>
-                        <g mask="url(#maskBlob)">
-                            <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-                           170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-                           447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-                           587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-                           438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
+        <div class="row">
 
-                            <rect x="37" width="476" height="630" fill="url(#pattern0)" />
-                        </g>
-
-                        <rect x="37" width="476" height="300" fill="url(#pattern1)" />
-
-                        <defs>
-                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
-                            </pattern>
-
-                            <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
-                            </pattern>
-
-                            <!-- Insert your profile (recommended size: 640 x 940) -->
-                            <image class="home-img" id="imageBlob" id="home-img" width="640" height="1200" src="./"
-                                href="./Assets/image/picture.png" />
-                        </defs>
-                    </svg>
-                </div>
+            <div class="image">
+                <img draggable="false" class="tilt home-img" src="./Assets/images/myself_image.png" alt="">
             </div>
-        </section>
+            <div class="content">
+                <h3 id="user-detail-name">I'm Saman Ranjan Pradhan </h3>
+                <span class="tag">Node Backend Developer<i class="fas fa-mobile-Node Backend Developer"></i></span>
 
-        <!--  about  -->
-        <section class="about section" id="about">
-            <div class="about-container container grid">
-                <div class="about-data">
-                    <h3 class="section-subtitle">
-                        My <span>Intro</span>
+                <p id="user-detail-intro">Aspiring Node Backend developer skilled in MERN stack
+                    with a good grasp on advance javascript concepts. Self-motivated with a strong problem-solving
+                    mindset and
+                    curious learner. Keen interest in building user-centric products. Looking forward to working in a
+                    challenging role with a growth-oriented organization. </p>
 
-                    </h3>
-                    <h2 class="section-title">
-                        About Me
+                <div class="box-container">
+                    <div class="box">
+                        <p><span> age: </span> 22</p>
+                        <p><span> phone : </span> +91 9330175007</p>
+                    </div>
+                    <div class="box">
+                        <p><span> email : </span> pradhansaman2017@gmail.com</p>
+                        <p><span> place : </span> Kolkata, West Bengal, India</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="resumebtn">
+                    <button id="resume-button-2">
 
-                    </h2>
-                    <p class="about-description">
-                        Back End Developer, create web servers and databases with optimal way.
-                    </p>
-                    <a href="#contact" class="button">Contact Me</a>
+                        <a id="resume-link-2" href="Assets/Saman_Pradhan_resume.pdf" download
+                            onclick="window.open('Assets/Saman_Pradhan_resume.pdf')" class="btn"><span>Resume</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </button>
+
                 </div>
 
-                <div id="about-section-here" class="about-image">
-                    <svg class="about-blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="maskBorder" mask-type="alpha">
-                            <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
-           171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
-           448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
-           270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
-           439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black" />
-                        </mask>
-                        <g mask="url(#maskBorder)">
-                            <rect x="37" width="476" height="630" fill="url(#pattern2)" />
-
-                            <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
-           192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
-           580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
-           40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
-           175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10" />
-                        </g>
-
-                        <rect x="37" width="476" height="300" fill="url(#pattern3)" />
-
-                        <defs>
-                            <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
-                            </pattern>
-
-                            <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
-                            </pattern>
-
-                            <!-- Insert your profile (recommended size: 640 x 940) -->
-                            <image class="about-img" id="imageBorder" width="640" height="940"
-                                href="./Assets/image/picture.png" />
-                        </defs>
-                    </svg>
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <!-- about section ends -->
 
-        <!-- skills -->
-        <section class="skills section">
-            <div class="skills-container  container grid">
-                <div class="skills-data">
-                    <h3 class="section-subtitle">
-                        Favorite <span>Skills</span>
-                    </h3>
-                    <h2 class="section-title">
-                        My Skills
-                    </h2>
-                    <a href="#projects" class="button">See Projects</a>
-                </div>
+    <!-- skills section starts -->
+    <section class="skills2" id="skills">
+
+        <h2 class="heading"><i class="fas fa-laptop-code"></i>Tech<span> Stack</span></h2>
+
+        <div class="container">
+            <div class="row" id="skillsContainer">
 
 
-                <!-- <div class="skills-content">
-                    <ol class="skills-group skills-card">
-                        <li class="skills-item">NodeJs</li>
-                        <li class="skills-item">ExpressJS</li>
-                        <li class="skills-item">MongoDB</li>
-                        <li class="skills-item">SQL</li>
-                    </ol>
-                </div>
-                <div class="skills-group skills-card">
-                    <ol class="skills-group">
-                        <li class="skills-item skills-card-name">HTML & CSS</li>
-                        <li class="skills-item skills-card-name">Advance JavaScript</li>
-                        <li class="skills-item skills-card-name">React</li>
-                        <li class="skills-item skills-card-name">Web Designing</li>
-                    </ol>
-                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-        </section>
+        </div>
 
 
 
-        </section>
-
-        <!-- projects -->
-        <section class="project section" id="projects">
-            <h3 class="section-subtitle">
-                My <span>Jobs</span>
-            </h3>
-
-            <h2 class="section-title">
-                Recent Projects
-            </h2>
-
-            <div class="project-container container grid">
-                <article class="project-card">
-                    <img class="project-img" src="./Assets/image/project-img-1.jpg" alt="project images">
-                    <div class="project-modal">
-                        <span class="project-subtitle">Web</span>
-
-                        <h2 class="project-title">Modern Website</h2>
-
-                        <a href="#" class="project-button">
-
-                            View Demo
-
-                            <i class="ri-external-link-line"></i>
-
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <img class="project-img" src="./Assets/image/project-img-2.jpg" alt="project images">
-                    <div class="project-modal">
-                        <span class="project-subtitle">Web</span>
-
-                        <h2 class="project-title">Modern Website</h2>
-
-                        <a href="#" class="project-button">
-
-                            View Demo
-
-                            <i class="ri-external-link-line"></i>
-
-                        </a>
-                    </div>
-                </article>
 
 
-                <article class="project-card">
-                    <img class="project-img" src="./Assets/image/project-img-3.jpg" alt="project images">
-                    <div class="project-modal">
-                        <span class="project-subtitle">Web</span>
 
-                        <h2 class="project-title">Modern Website</h2>
+    </section>
+    <!-- skills section ends -->
 
-                        <a href="#" class="project-button">
+    <section id="gitSection" style="text-align: center;">
 
-                            View Demo
+        <div id="heading-git">
 
-                            <i class="ri-external-link-line"></i>
-
-                        </a>
-                    </div>
-                </article>
+            <h1 id="ddd">My Github <span style="color: yellow">Contribution</span><span id="git-image"></span> </h1>
 
 
-                <article class="project-card">
-                    <img class="project-img" src="./Assets/image/project-img-4.jpg" alt="project images">
-                    <div class="project-modal">
-                        <span class="project-subtitle">Web</span>
-
-                        <h2 class="project-title">Modern Website</h2>
-
-                        <a href="#" class="project-button">
-
-                            View Demo
-
-                            <i class="ri-external-link-line"></i>
-
-                        </a>
-                    </div>
-                </article>
+        </div>
 
 
-                <article class="project-card">
-                    <img class="project-img" src="./Assets/image/project-img-5.jpg" alt="project images">
-                    <div class="project-modal">
-                        <span class="project-subtitle">Web</span>
 
-                        <h2 class="project-title">Modern Website</h2>
-
-                        <a href="#" class="project-button">
-
-                            View Demo
-
-                            <i class="ri-external-link-line"></i>
-
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <div class="github-data" id="github-data">
+        <div id="contri">
 
 
             <div>
@@ -354,91 +193,174 @@
                 <img id="github-stats-card" alt="status github, commits, etc..."
                     src="https://github-readme-stats.vercel.app/api?username=SamanPradhan&show_icons=true&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=10&hide_border=true">
             </div>
-
-            <div>
-                <img id="github-top-langs" alt="most used languages"
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=SamanPradhan&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8&hide_border=true&langs_count=20&hide=hack,swift,kotlin,objective-c" />
-            </div>
-            <div></div>
+            <!--  -->
 
         </div>
 
-        <!-- contact -->
-        <section class="contacts section" id="contact">
-            <h3 class="section-subtitle">
-                Get In <span>Touch</span>
-            </h3>
+        <div id="contri2">
+            <img id="github-top-langs" alt="most used languages"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=SamanPradhan&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8&hide_border=true&langs_count=20&hide=hack,swift,kotlin,objective-c" />
+        </div>
 
-            <h2 class="section-title">
-                Contact Me
-            </h2>
+        <div class="calendar react-activity-calendar tilt" id="calendwer"></div>
 
-            <div class="contacts-container container grid">
-                <form action="" class="contacts-form" id="contact-form">
-                    <div class="contacts-group">
-                        <input class="contacts-input" type="text" name="user_name" required
-                            placeholder="Enter your name">
-                        <input class="contacts-input" type="text" name="user_email" required
-                            placeholder="Enter your email">
 
+
+
+    </section>
+
+    <!-- work project section starts -->
+    <section class="work" id="projects">
+
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+        <div class="box-container">
+
+
+
+        </div>
+
+    </section>
+    <!-- work project section ends -->
+
+
+    <!-- contact section starts -->
+    <section class="contact2" id="contact2">
+
+        <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+        <div class="container">
+            <div class="content">
+                <div class="image-box">
+                    <img draggable="false" src="./Assets/images/contact1.png" alt="">
+                </div>
+                <form id="contact-form">
+
+                    <div class="form-group">
+                        <div class="field">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <i class='fas fa-user'></i>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="email" placeholder="Email" required>
+                            <i class='fas fa-envelope'></i>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="phone" placeholder="Phone">
+                            <i class='fas fa-phone-alt'></i>
+                        </div>
+                        <div class="message">
+                            <textarea placeholder="Message" name="message" required></textarea>
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
                     </div>
-                    <textarea class="contacts-input" name="user_project" id="" required
-                        placeholder="Enter your message"></textarea>
-
-                    <p class=" contacts-message" id="contact-message"></p>
-
-                    <button type="submit" class="button contacts-button">Send Message</button>
+                    <div class="button-area">
+                        <button type="submit">
+                            Submit <i class="fa fa-paper-plane"></i></button>
+                    </div>
                 </form>
             </div>
-        </section>
-    </main>
-
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container container grid">
-            <div>
-                <h1 class="footer-title">
-                    Saman Ranjan <span>Pradhan</span>
-
-                </h1>
-                <h2 class="footer-education">
-                    Backend Developer
-                </h2>
-            </div>
-
-            <div class="diff-foor-main">
-
-                <a href="https://github.com/SamanPradhan" target="_blank " id="foot1" class="diffFoor">
-                    <i class="ri-github-fill"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/samanpradhan/" target="_blank " class="diffFoor" id="foot2">
-                    <i class="ri-linkedin-box-line"></i>
-                </a>
-                <a href="https://www.behance.net/samanpradhan" target="_blank " class="diffFoor" id="foot3" class="">
-                    <i class="ri-behance-line"></i>
-                </a>
-
-            </div>
-            <span class="footer-copy">
-                &#169;Copyright SamanPradhan. All rights reserved
-            </span>
         </div>
-    </footer>
+    </section>
+    <!-- contact section ends -->
 
-    <!--= scroll up-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
 
-    </a>
+    <!-- footer section starts -->
+    <section class="footer" id="contact">
 
-    <!-- scrollreveal-->
-    <script src=""></script>
+        <div class="box-container">
 
-    <!-- email js-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <div class="box">
+                <h3>Saman's Portfolio</h3>
+                <p>Thank you for visiting my portfolio website. Connect with me over socials. <br /> <br /> Keep Rising
+                    🚀</p>
+            </div>
 
-    <!-- main js -->
-    <script src="./Assets/js/main.js"></script>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+                <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+                <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+
+                <a href="#projects"><i class="fas fa-chevron-circle-right"></i> work</a>
+
+            </div>
+            <!--  -->
+            <div class="box">
+                <h3>contact info</h3>
+                <p id="contact-phone"> <i class="fas fa-phone"></i>+91 9330175001</p>
+                <p id="contact-email"> <i class="fas fa-envelope"></i>pradhansaman2017@gmail.com</p>
+                <p> <i class="fas fa-map-marked-alt"></i>Kolkata, West Bengal, India</p>
+                <div class="share">
+
+                    <a id="contact-linkedin" href="https://www.linkedin.com/in/samanpradhan/" class="fab fa-linkedin"
+                        aria-label="LinkedIn" target="_blank"></a>
+                    <a id="contact-github" href="https://github.com/SamanPradhan" class="fab fa-github"
+                        aria-label="GitHub" target="_blank"></a>
+
+                </div>
+            </div>
+        </div>
+
+        <h1 class="credit">Designed </i> by <a href="https://www.linkedin.com/in/samanpradhan/"> 👨‍💻
+                Saman Ranjan Pradhan</a></h1>
+        <!-- <i class="fa fa-heart pulse"></i> -->
+    </section>
+    <!-- footer section ends -->
+
+
+    <!-- scroll top btn -->
+    <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+    <!-- scroll back to top -->
+
+
+    <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- typed.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+        integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- particle.js links -->
+    <script src="./Assets/js/particles.min.js"></script>
+    <script src="./Assets/js/app.js"></script>
+
+    <!-- vanilla tilt.js links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+        integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- scroll reveal anim -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+    <script src="./Assets/js/script.js"></script>
+
+
+
+
+
+
+
+
+
 </body>
+<!-- Prepare a container for your calendar. -->
+<script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+
+<script>
+    new GitHubCalendar(".calendar", "SamanPradhan");
+</script>
 
 </html>
