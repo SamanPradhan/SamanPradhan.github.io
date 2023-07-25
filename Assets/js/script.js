@@ -65,7 +65,7 @@ async function fetchData(type = "skills") {
   let response;
   type === "skills"
     ? (response = await fetch("skills.json"))
-    : (response = await fetch("./Assets/projects/projects.json"));
+    : (response = await fetch("projects.json"));
   const data = await response.json();
   return data;
 }
@@ -86,30 +86,27 @@ function showSkills(skills) {
 }
 
 /* JavaScript code for generating project cards */
-
+// <img id="projectimage"  src="Assets/images/projects/${project.image}.png" alt="project" />
 function showProjects(projects) {
   let projectsContainer = document.querySelector("#projects .box-container");
   let projectHTML = "";
   projects.forEach((project) => {
     projectHTML += `
-      <div class="box project-card">
+  <div class="box project-card">
 
-    <img id="projectimage" draggable="false" src="Assets/images/projects/${project.image}.png" alt="project" />
+  
 
     <div>
-      <div class="tag">
-      <h3 class="project-title">${project.name}</h3>
-      </div>
-      <div class="desc">
-        <p class="project-description">${project.desc}</p>
-        <br>
+      <div class="tag"> <h3 class="project-title">${project.name}</h3> </div>
+      <div class="desc"> <p class="project-description">${project.desc}</p>  <br>
      
         <div class="btns">
           <a href="${project.links.view}" class="btn project-deployed-link" target="_blank"><i class="fas fa-eye"></i> View</a>
           <a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
+        </div>
 
-           <div id="tech2" class="project-tech-stack"><img id="tech" src="https://skillicons.dev/icons?i=${project.stacks}" alt=""></div>
+        <div id="tech2" class="project-tech-stack"><img id="tech" src="https://skillicons.dev/icons?i=${project.stacks}" alt="">
+        </div>
 
       </div>
     </div>

@@ -3,7 +3,7 @@
     "name": "Employee Time management application - TimeTrackerX",
     "desc": "This is a employee management application which is used for trackking employee data, their work schedules, projects are they working, the meeting they are doing, etc.",
     "image": "TimeTrackerX",
-    "stacks": "js,html,css,nodejs, expressjs, mongodb, git,netlify",
+    "stacks": "js,html,css,nodejs,express,mongodb,git,netlify",
     "links": {
       "view": "https://timetrackerx.netlify.app/",
       "code": "https://github.com/SamanPradhan/TimeTrackerX"
@@ -13,7 +13,7 @@
     "name": "Thirdstep",
     "desc": "This website is a fully functional shoeselling website with all features and a full admin side. Users can buy their favorite shoe according to their choices and get it delivered.",
     "image": "Thirdstep",
-    "stacks": "js,html,css,git,netlify, json server",
+    "stacks": "js,html,css,git,netlify",
     "links": {
       "view": "https://thirdstep.netlify.com/",
       "code": "https://github.com/SamanPradhan/thirdstep"
@@ -22,8 +22,8 @@
   {
     "name": "Heal Hub",
     "desc": "This is a online doctor booking application which is used for booking doctor's appointment with appropriete time slots according to their specialities and convenience, etc.",
-    "image": "HealHub",
-    "stacks": "js,html,css,nodejs, expressjs, mongodb,redis, git,netlify",
+    "image": "healhub",
+    "stacks": "js,html,css,nodejs,express,mongodb,redis,git,netlify",
     "links": {
       "view": "https://rad-squirrel-f6507f.netlify.app/",
       "code": "https://github.com/SamanPradhan/adaptable-oven-8035"
@@ -33,7 +33,7 @@
     "name": "Pizza Town",
     "desc": "This website is a clone of dominos.com which can be used to order fresh and tasty pizzas online.",
     "image": "pizzatown",
-    "stacks": "js,html,css, git,netlify",
+    "stacks": "js,html,css,git,netlify",
     "links": {
       "view": "https://pizzatown.netlify.app/",
       "code": "https://github.com/SamanPradhan/PizzaPoint"
