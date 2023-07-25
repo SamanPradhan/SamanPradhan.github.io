@@ -92,12 +92,12 @@ function showProjects(projects) {
   let projectHTML = "";
   projects.forEach((project) => {
     projectHTML += `
-  <div class="box project-card">
-
+  <div class="box project-card" id="project-card-each">
+   
   
-
-    <div>
-      <div class="tag"> <h3 class="project-title">${project.name}</h3> </div>
+  <img id="projectimage"  src="Assets/images/projects/${project.image}" alt="project" />
+    <div id="project-card-each2">
+      <div class="tag"> <h3 class="project-title"  id="project-title-head">${project.name}</h3> </div>
       <div class="desc"> <p class="project-description">${project.desc}</p>  <br>
      
         <div class="btns">
@@ -105,7 +105,7 @@ function showProjects(projects) {
           <a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code"></i></a>
         </div>
 
-        <div id="tech2" class="project-tech-stack"><img id="tech" src="https://skillicons.dev/icons?i=${project.stacks}" alt="">
+        <div id="tech2" class="project-tech-stack"><img id="tech" style ="align: center" src="https://skillicons.dev/icons?i=${project.stacks}" alt="">
         </div>
 
       </div>

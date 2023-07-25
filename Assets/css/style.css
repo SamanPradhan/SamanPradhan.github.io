@@ -604,6 +604,34 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+#tech {
+  width: 550px;
+  align-items: center;
+  padding: 100px;
+}
+
+#project-card-each {
+  display: flex;
+  padding: 20px;
+}
+
+#project-card-each > img {
+  width: 44%;
+  padding: 0px 10px 0px 0px;
+  border-radius: 30px;
+}
+
+#project-card-each,
+#project-card-each2 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#project-title-head {
+  padding: 6px;
+  background-color: white;
+  color: black;
+  height: 35px;
+  border-radius: 10px;
+}
 
 .work .box-container .box .content .tag {
   display: flex;

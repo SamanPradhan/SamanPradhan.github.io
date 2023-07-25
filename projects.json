@@ -2,8 +2,8 @@
   {
     "name": "Employee Time management application - TimeTrackerX",
     "desc": "This is a employee management application which is used for trackking employee data, their work schedules, projects are they working, the meeting they are doing, etc.",
-    "image": "TimeTrackerX",
-    "stacks": "js,html,css,nodejs,express,mongodb,git,netlify",
+    "image": "TimeTrackerX.png",
+    "stacks": "js,html,css,nodejs,express,mongodb,",
     "links": {
       "view": "https://timetrackerx.netlify.app/",
       "code": "https://github.com/SamanPradhan/TimeTrackerX"
@@ -12,8 +12,8 @@
   {
     "name": "Ecommerce Website - Thirdstep",
     "desc": "This website is a fully functional shoeselling website with all features and a full admin side. Users can buy their favorite shoe according to their choices and get it delivered.",
-    "image": "Thirdstep",
-    "stacks": "js,html,css,git,netlify",
+    "image": "Thirdstep.png",
+    "stacks": "js,html,css,git,netlify, mongodb",
     "links": {
       "view": "https://thirdstep.netlify.com/",
       "code": "https://github.com/SamanPradhan/thirdstep"
@@ -22,8 +22,8 @@
   {
     "name": "doctor's appointment booking application - Heal Hub",
     "desc": "This is a online doctor booking application which is used for booking doctor's appointment with appropriete time slots according to their specialities and convenience, etc.",
-    "image": "healhub",
-    "stacks": "js,html,css,nodejs,express,mongodb,redis,git,netlify",
+    "image": "healhub.png",
+    "stacks": "js,html,nodejs,express,mongodb,redis",
     "links": {
       "view": "https://rad-squirrel-f6507f.netlify.app/",
       "code": "https://github.com/SamanPradhan/adaptable-oven-8035"
@@ -32,8 +32,8 @@
   {
     "name": "Pizza ordering website - Pizza Town",
     "desc": "This website is a clone of dominos.com which can be used to order fresh and tasty pizzas online.",
-    "image": "pizzatown",
-    "stacks": "js,html,css,git,netlify",
+    "image": "pizzatown.png",
+    "stacks": "js,html,css,git,netlify,vscode",
     "links": {
       "view": "https://pizzatown.netlify.app/",
       "code": "https://github.com/SamanPradhan/PizzaPoint"
