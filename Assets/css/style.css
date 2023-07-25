@@ -633,7 +633,7 @@ header .navbar ul li a:hover {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 800px) and (min-width: 10px) {
+@media only screen and (max-width: 1000px) and (min-width: 10px) {
   #project-card-each {
     display: flex;
     flex-direction: column;
@@ -713,13 +713,13 @@ header .navbar ul li a:hover {
     font-size: 12px !important;
   }
 }
-@media only screen and (max-width: 800px) and (min-width: 620px) {
+@media only screen and (max-width: 1000px) and (min-width: 620px) {
   #tech2 {
     display: none;
   }
 }
-@media only screen and (max-width: 1000px) and (min-width: 800px) {
-}
+/* @media only screen and (max-width: 1000px) and (min-width: 800px) {
+} */
 
 #nameHead,
 #nameTale {
@@ -878,11 +878,14 @@ form .button-area {
   .contact2 .container .content {
     padding: 18px 12px;
   }
-  .contact2 .content .image-box {
+  /* .contact2 .content .image-box {
+    display: none;
+  } */
+  #get-in-touch-img {
     display: none;
   }
-  .contact .content form {
-    width: 100%;
+  #contact-form {
+    width: 180%;
     margin-right: 2rem;
   }
 }
@@ -1089,7 +1092,7 @@ form .button-area {
     padding: 0;
   }
 }
-@media only screen and (max-width: 800px) and (min-width: 620px) {
+@media only screen and (max-width: 1000px) and (min-width: 620px) {
   #calendwer {
     display: none;
   }
