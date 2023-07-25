@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Node JS",
+    "icon": "nodejs.png"
+  },
+  {
+    "name": "Express JS",
+    "icon": "expressjs.png"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "MongoDB.png"
+  },
+  {
+    "name": "redis",
+    "icon": "redis.png"
+  },
+  {
+    "name": "MySQL",
+    "icon": "mysql.png"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "javascript.png"
+  },
+  {
+    "name": "typescript",
+    "icon": "typescript.png"
+  },
+  {
+    "name": "HTML",
+    "icon": "html-5.png"
+  },
+
+  {
+    "name": "CSS",
+    "icon": "css.png"
+  },
+  {
+    "name": "Restful - API",
+    "icon": "api-w.png"
+  },
+  {
+    "name": "DSA",
+    "icon": "dsa.png"
+  },
+  {
+    "name": "System Design",
+    "icon": "systemdesign.png"
+  },
+  {
+    "name": "Swagger",
+    "icon": "Swagger.png"
+  },
+
+  {
+    "name": "Postman",
+    "icon": "postman.png"
+  },
+
+  {
+    "name": "Github",
+    "icon": "githubw.png"
+  }
+]
