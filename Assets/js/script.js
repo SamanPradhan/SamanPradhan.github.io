@@ -193,9 +193,9 @@ fetchData().then((data) => {
   showSkills(data);
 });
 
-fetchData("projects").then((data) => {
-  showProjects(data);
-});
+// fetchData("projects").then((data) => {
+//   showProjects(data);
+// });
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 // const srtop = ScrollReveal({

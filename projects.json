@@ -10,7 +10,7 @@
     }
   },
   {
-    "name": "Thirdstep",
+    "name": "Ecommerce Website - Thirdstep",
     "desc": "This website is a fully functional shoeselling website with all features and a full admin side. Users can buy their favorite shoe according to their choices and get it delivered.",
     "image": "Thirdstep",
     "stacks": "js,html,css,git,netlify",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "name": "Heal Hub",
+    "name": "doctor's appointment booking application - Heal Hub",
     "desc": "This is a online doctor booking application which is used for booking doctor's appointment with appropriete time slots according to their specialities and convenience, etc.",
     "image": "healhub",
     "stacks": "js,html,css,nodejs,express,mongodb,redis,git,netlify",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "name": "Pizza Town",
+    "name": "Pizza ordering website - Pizza Town",
     "desc": "This website is a clone of dominos.com which can be used to order fresh and tasty pizzas online.",
     "image": "pizzatown",
     "stacks": "js,html,css,git,netlify",
