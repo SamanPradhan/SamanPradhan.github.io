@@ -633,6 +633,22 @@ header .navbar ul li a:hover {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 800px) and (min-width: 10px) {
+  #project-card-each {
+    display: flex;
+    flex-direction: column;
+    height: 130%;
+  }
+
+  #project-card-each > img {
+    width: 103%;
+    border-radius: 0px;
+  }
+  #project-title-head {
+    border-radius: 0px;
+  }
+}
+
 .work .box-container .box .content .tag {
   display: flex;
   flex-direction: row;
@@ -683,7 +699,12 @@ header .navbar ul li a:hover {
 
 @media only screen and (max-width: 620px) and (min-width: 10px) {
   #tech2 {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #tech {
+    padding: 7px;
   }
   .desc .pp {
     display: none !important;
@@ -843,7 +864,13 @@ form .button-area {
 /* contact section media queries starts */
 @media (max-width: 900px) {
   .contact2 {
-    min-height: 70vh;
+    height: 100%;
+  }
+  #topper {
+    padding: 70px;
+  }
+  .contact2 input {
+    width: 200%;
   }
   .contact2 .container {
     margin: 3rem 0 2rem 0;
