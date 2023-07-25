@@ -41,15 +41,15 @@ $(document).ready(function () {
   });
 });
 
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "visible") {
-    document.title = "Portfolio | Saman Ranjan Pradhan";
-    $("#favicon").attr("href", "Assets/images/R.png");
-  } else {
-    document.title = "Come Back To Portfolio";
-    $("#favicon").attr("href", "Assets/images/back.png");
-  }
-});
+// document.addEventListener("visibilitychange", function () {
+//   if (document.visibilityState === "visible") {
+//     document.title = "Portfolio | Saman Ranjan Pradhan";
+//     $("#favicon").attr("href", "Assets/images/R.png");
+//   } else {
+//     document.title = "Come Back To Portfolio";
+//     $("#favicon").attr("href", "Assets/images/back.png");
+//   }
+// });
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
@@ -115,67 +115,67 @@ function showProjects(projects) {
 
   projectsContainer.innerHTML = projectHTML;
 
-  let sendbtn = document.querySelector("#send");
-  sendbtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    let name = document.querySelector("input[name='name']").value;
-    let email = document.querySelector("input[name='email']").value;
-    let message = document.querySelector("textarea[name='message']").value;
-    let phone = document.querySelector("input[name='phone']").value;
+  // let sendbtn = document.querySelector("#send");
+  // sendbtn.addEventListener("click", function (e) {
+  //   e.preventDefault();
+  //   let name = document.querySelector("input[name='name']").value;
+  //   let email = document.querySelector("input[name='email']").value;
+  //   let message = document.querySelector("textarea[name='message']").value;
+  //   let phone = document.querySelector("input[name='phone']").value;
 
-    if (email.length < 7) {
-      if (
-        name.length == 0 ||
-        email.length == 0 ||
-        message.length == 0 ||
-        phone.length == 0
-      ) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Please make sure to fill in all the required fields before submitting the form!",
-        });
-        return;
-      }
+  //   if (email.length < 7) {
+  //     if (
+  //       name.length == 0 ||
+  //       email.length == 0 ||
+  //       message.length == 0 ||
+  //       phone.length == 0
+  //     ) {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "Oops...",
+  //         text: "Please make sure to fill in all the required fields before submitting the form!",
+  //       });
+  //       return;
+  //     }
 
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Invalid Email Address!",
-      });
-      return;
-    }
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Oops...",
+  //       text: "Invalid Email Address!",
+  //     });
+  //     return;
+  //   }
 
-    let bodym =
-      "name: " +
-      name +
-      "<br/> email :" +
-      email +
-      "<br/> phone :" +
-      phone +
-      "<br/> message :" +
-      message;
+  //   let bodym =
+  //     "name: " +
+  //     name +
+  //     "<br/> email :" +
+  //     email +
+  //     "<br/> phone :" +
+  //     phone +
+  //     "<br/> message :" +
+  //     message;
 
-    Email.send({
-      SecureToken: "a5d79846-ab78-4f9c-a0a8-bf499c8aead5",
-      To: "pradhansaman2017@gmail.com",
-      From: "pradhansaman2017@gmail.com",
-      Subject: "Message send through Portfolio by :" + name,
-      Body: bodym,
-    }).then((message) =>
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Message sent successfully!",
-        showConfirmButton: false,
-        timer: 1500,
-      })
-    );
-    document.querySelector("input[name='name']").value = "";
-    document.querySelector("input[name='email']").value = "";
-    document.querySelector("textarea[name='message']").value = "";
-    document.querySelector("input[name='phone']").value = "";
-  });
+  //   Email.send({
+  //     SecureToken: "a5d79846-ab78-4f9c-a0a8-bf499c8aead5",
+  //     To: "pradhansaman2017@gmail.com",
+  //     From: "pradhansaman2017@gmail.com",
+  //     Subject: "Message send through Portfolio by :" + name,
+  //     Body: bodym,
+  //   }).then((message) =>
+  //     Swal.fire({
+  //       position: "top-end",
+  //       icon: "success",
+  //       title: "Message sent successfully!",
+  //       showConfirmButton: false,
+  //       timer: 1500,
+  //     })
+  //   );
+  //   document.querySelector("input[name='name']").value = "";
+  //   document.querySelector("input[name='email']").value = "";
+  //   document.querySelector("textarea[name='message']").value = "";
+  //   document.querySelector("input[name='phone']").value = "";
+  // });
 
   /* ===== SCROLL REVEAL ANIMATION ===== */
   const srtop = ScrollReveal({
@@ -193,9 +193,9 @@ fetchData().then((data) => {
   showSkills(data);
 });
 
-// fetchData("projects").then((data) => {
-//   showProjects(data);
-// });
+fetchData("projects").then((data) => {
+  showProjects(data);
+});
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
 // const srtop = ScrollReveal({
