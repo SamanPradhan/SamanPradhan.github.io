@@ -20,6 +20,16 @@
     }
   },
   {
+    "name": "AI Interview preparation platform",
+    "desc": "This website is a tech interview questions preparation platform which gives questions related to your choosen topic and gives feedback for your answer with help of OpenAI api",
+    "image": "spark-ai.png",
+    "stacks": "nodejs,express,mongodb,react,tailwind,git",
+    "links": {
+      "view": "https://spark-ai-interview.netlify.app/",
+      "code": "https://github.com/SamanPradhan/SparkAi"
+    }
+  },
+  {
     "name": "doctor's appointment booking application - Heal Hub",
     "desc": "This is a online doctor booking application which is used for booking doctor's appointment with appropriete time slots according to their specialities and convenience, etc.",
     "image": "healhub.png",
@@ -37,16 +47,6 @@
     "links": {
       "view": "https://pizzatown.netlify.app/",
       "code": "https://github.com/SamanPradhan/PizzaPoint"
-    }
-  },
-  {
-    "name": "AI Interview preparation platform",
-    "desc": "This website is a tech interview questions preparation platform which gives questions related to your choosen topic and gives feedback for your answer with help of OpenAI api",
-    "image": "spark-ai.png",
-    "stacks": "nodejs,express,mongodb,react,tailwind,git",
-    "links": {
-      "view": "https://spark-ai-interview.netlify.app/",
-      "code": "https://github.com/SamanPradhan/SparkAi"
     }
   }
 ]
