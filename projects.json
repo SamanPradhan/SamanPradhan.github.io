@@ -10,13 +10,13 @@
     }
   },
   {
-    "name": "Ecommerce Website - Thirdstep",
+    "name": "Ecommerce Website - StepUp-Field",
     "desc": "This website is a fully functional shoeselling website with all features and a full admin side. Users can buy their favorite shoe according to their choices and get it delivered.",
-    "image": "Thirdstep.png",
-    "stacks": "js,html,css,git,netlify, mongodb",
+    "image": "StepUp-Field.png",
+    "stacks": "nodejs,express,redis,mongodb,html,css, ",
     "links": {
-      "view": "https://thirdstep.netlify.com/",
-      "code": "https://github.com/SamanPradhan/thirdstep"
+      "view": "https://stepup-field.netlify.app/",
+      "code": "https://github.com/SamanPradhan/stepup-field-main"
     }
   },
   {
@@ -37,6 +37,16 @@
     "links": {
       "view": "https://pizzatown.netlify.app/",
       "code": "https://github.com/SamanPradhan/PizzaPoint"
+    }
+  },
+  {
+    "name": "AI Interview preparation platform",
+    "desc": "This website is a tech interview questions preparation platform which gives questions related to your choosen topic and gives feedback for your answer with help of OpenAI api",
+    "image": "spark-ai.png",
+    "stacks": "nodejs,express,mongodb,react,tailwind,git",
+    "links": {
+      "view": "https://spark-ai-interview.netlify.app/",
+      "code": "https://github.com/SamanPradhan/SparkAi"
     }
   }
 ]
