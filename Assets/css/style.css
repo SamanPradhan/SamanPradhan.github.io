@@ -212,7 +212,7 @@ header .navbar ul li a:hover {
   width: 70%;
   margin-left: 6rem;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 .home2 .image img:hover {
@@ -524,6 +524,9 @@ header .navbar ul li a:hover {
     margin-top: 5px;
     width: 100%;
   }
+  .home2 .image img {
+    display: none;
+  }
 }
 @media only screen and (max-width: 800px) and (min-width: 620px) {
   .skills2 .container {
@@ -540,6 +543,9 @@ header .navbar ul li a:hover {
     margin-top: 5px;
     width: 100%;
   }
+  .home2 .image img {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1000px) and (min-width: 800px) {
   .skills2 .container {
@@ -555,6 +561,9 @@ header .navbar ul li a:hover {
   .skills .container {
     margin-top: 5px;
     width: 100%;
+  }
+  .home2 .image img {
+    display: none;
   }
 }
 
