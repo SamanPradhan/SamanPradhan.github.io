@@ -15,7 +15,7 @@
     "image": "StepUp-Field.png",
     "stacks": "nodejs,express,redis,mongodb,html,css, ",
     "links": {
-      "view": "https://stepup-field.netlify.app/",
+      "view": "https://step-up-field-frontend.vercel.app/",
       "code": "https://github.com/SamanPradhan/stepup-field-main"
     }
   },
