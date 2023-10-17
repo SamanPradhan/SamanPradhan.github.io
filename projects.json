@@ -30,16 +30,6 @@
     }
   },
   {
-    "name": "doctor's appointment booking application - Heal Hub",
-    "desc": "This is a online doctor booking application which is used for booking doctor's appointment with appropriete time slots according to their specialities and convenience, etc.",
-    "image": "healhub.png",
-    "stacks": "js,html,nodejs,express,mongodb,redis",
-    "links": {
-      "view": "https://rad-squirrel-f6507f.netlify.app/",
-      "code": "https://github.com/SamanPradhan/adaptable-oven-8035"
-    }
-  },
-  {
     "name": "Pizza ordering website - Pizza Town",
     "desc": "This website is a clone of dominos.com which can be used to order fresh and tasty pizzas online.",
     "image": "pizzatown.png",
