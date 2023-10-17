@@ -477,9 +477,7 @@ header .navbar ul li a:hover {
 .skills2 h2 {
   color: #fff;
 }
-.skills2 .heading span {
-  /* color: rgb(255, 230, 0); */
-}
+
 .skills2 .container {
   background-color: #070707;
   color: #fff;
@@ -605,9 +603,7 @@ header .navbar ul li a:hover {
   color: #fff;
   padding: 1rem;
 }
-.work .heading span {
-  /* color: rgb(255, 230, 0); */
-}
+
 .work .box-container {
   display: flex;
   flex-wrap: wrap;
