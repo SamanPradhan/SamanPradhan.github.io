@@ -721,6 +721,11 @@ header .navbar ul li a:hover {
 /* Media query for screen width up to 620px */
 
 @media only screen and (max-width: 480px) {
+  #github-streak-stats,
+  #github-stats-card,
+  #github-top-langs {
+    width: 80%;
+  }
   .work h3 {
     font-size: 12px !important;
   }
