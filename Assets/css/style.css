@@ -686,6 +686,14 @@ header .navbar ul li a:hover {
 .work .desc .btns .btn:hover {
   background: #310ae0f5;
 }
+#project-card-each {
+  height: 100%;
+  padding-bottom: 11px;
+}
+#project-card-each2 {
+  height: 97%;
+  border-radius: 20px;
+}
 #project-title-head {
   background-color: white;
   font-size: 14px;
