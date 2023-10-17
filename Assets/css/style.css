@@ -721,11 +721,17 @@ header .navbar ul li a:hover {
 /* Media query for screen width up to 620px */
 
 @media only screen and (max-width: 560px) {
+  #coder-icon-1 {
+    display: none;
+  }
+
+  #contri {
+    width: 80px;
+  }
   #github-streak-stats,
   #github-stats-card,
   #github-top-langs {
-    width: 80%;
-    display: none;
+    /* display: none; */
   }
   .work h3 {
     font-size: 12px !important;
@@ -1212,4 +1218,7 @@ form .button-area {
 
 #contact-icons {
   background-color: #e5ecfb;
+}
+#contact-button-i {
+  background-color: transparent;
 }
