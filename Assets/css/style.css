@@ -725,7 +725,11 @@ header .navbar ul li a:hover {
   background-color: transparent;
 }
 /* *********************** */
-
+#github-streak-stats,
+#github-stats-card,
+#github-top-langs {
+  width: 55%;
+}
 /* Media query for screen width up to 620px */
 
 @media only screen and (max-width: 560px) {
@@ -733,14 +737,6 @@ header .navbar ul li a:hover {
     display: none;
   }
 
-  #contri {
-    width: 20px;
-  }
-  /* #github-streak-stats,
-  #github-stats-card,
-  #github-top-langs {
-     display: none; 
-  } */
   .work h3 {
     font-size: 12px !important;
   }
