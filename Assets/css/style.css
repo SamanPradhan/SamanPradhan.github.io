@@ -736,7 +736,11 @@ header .navbar ul li a:hover {
   #coder-icon-1 {
     display: none;
   }
-
+  #github-streak-stats,
+  #github-stats-card,
+  #github-top-langs {
+    width: 85%;
+  }
   .work h3 {
     font-size: 12px !important;
   }
