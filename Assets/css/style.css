@@ -690,7 +690,10 @@ header .navbar ul li a:hover {
 .work .desc .btns .btn:hover {
   background: #310ae0f5;
 }
-
+#project-title-head {
+  background-color: white;
+  font-size: 14px;
+}
 #tech2 {
   width: 50%;
   margin: auto;
@@ -704,6 +707,12 @@ header .navbar ul li a:hover {
   text-align: center;
   align-items: center;
   margin-top: 30px;
+}
+#works-icons-out:hover {
+  background-color: #310ae0f5;
+}
+#works-icons-new {
+  background-color: transparent;
 }
 /* *********************** */
 
@@ -1191,4 +1200,8 @@ form .button-area {
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
+
+#contact-icons {
+  background-color: #e5ecfb;
 }

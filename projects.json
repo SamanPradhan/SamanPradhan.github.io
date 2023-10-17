@@ -3,9 +3,10 @@
     "name": "Startup focusing on building a mentor-mentee platform - inQbator",
     "desc": "Introducing a dynamic Mentorship Platform, where industry titans lend their expertise to nurture aspiring entrepreneurs. Our platform connects established leaders with eager mentees to cultivate the next generation of innovators, fostering growth and success in the business world.",
     "image": "inqbator.png",
-    "stacks": "reactjs,,nodejs,express,mongodb,redis",
+    "stacks": "react,nodejs,express,mongodb,redis,tailwind",
     "links": {
-      "view": "https://inqbator.in"
+      "view": "https://inqbator.in",
+      "code": ""
     }
   },
   {
