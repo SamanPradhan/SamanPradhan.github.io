@@ -76,9 +76,9 @@ function showSkills(skills) {
   skills.forEach((skill) => {
     skillHTML += `
       <div class="bar">
-            <div sytle="background-color: transparent" class="info skills-card">
-              <img sytle="background-color: transparent" class="skills-card-img" src="Assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
-              <span sytle="background-color: transparent" class="skills-card-name" >${skill.name}</span>
+            <div  class="info skills-card" id="skills-cards-small">
+              <img class="skills-card-img"  id="skills-cards-img" src="Assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
+              <span class="skills-card-name" id="skills-cards-span" >${skill.name}</span>
             </div>
           </div>`;
   });

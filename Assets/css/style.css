@@ -714,6 +714,12 @@ header .navbar ul li a:hover {
 #works-icons-new {
   background-color: transparent;
 }
+
+#skills-cards-small,
+#skills-cards-span,
+#skills-cards-img {
+  background-color: transparent;
+}
 /* *********************** */
 
 /* Media query for screen width up to 620px */
