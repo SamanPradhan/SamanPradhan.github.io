@@ -64,7 +64,7 @@ header {
   justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
-  background-color: #0000006c;
+  /* background-color: #0000006c; */
   box-shadow: 0 1px 4px rgba(128, 0, 255, 0.3);
 }
 section {
@@ -140,7 +140,7 @@ header .navbar ul li a:hover {
     height: 100%;
     text-align: left;
     align-items: flex-start;
-    background-color: #0e0f3188;
+    /* background-color: #0e0f3188; */
   }
   header .navbar ul {
     flex-flow: column;
