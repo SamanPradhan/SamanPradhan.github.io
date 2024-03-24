@@ -10,6 +10,26 @@
     }
   },
   {
+    "name": "Revolutionizing healthcare with a groundbreaking medtech platform that optimizes patient care - WellScribe.",
+    "desc": "WellScribe is a revolutionary medtech platform that streamlines and enhances the patient care system. It features digital auto-prescription generation, seamless patient booking system management, and a host of other innovative tools designed to optimize healthcare delivery.",
+    "image": "wellscribe.png",
+    "stacks": "react,nodejs,express,mongodb,redis,tailwind",
+    "links": {
+      "view": "https://wellscribe.in",
+      "code": ""
+    }
+  },
+  {
+    "name": "Transforming Global Healthcare with Mirmedikaravan Global Health Connect",
+    "desc": "Mirmedikaravan is a transformative platform that empowers patients worldwide to access top-tier healthcare services. From any corner of the globe, individuals can easily book appointments with leading doctors from prestigious hospitals. Mirmedikaravan is dedicated to ensuring that high-quality medical care is accessible to all, regardless of geographical boundaries. Experience a new era of healthcare with Mirmedikaravan.",
+    "image": "mirmedikaravan.png",
+    "stacks": "nextjs,nodejs,express,mongodb,redis,tailwind",
+    "links": {
+      "view": "https://mirmedikaravan.com/",
+      "code": ""
+    }
+  },
+  {
     "name": "Fully functioning Ecommerce Website - StepUp-Field",
     "desc": "This website is a fully functional shoeselling website with all features and a full admin side. Users can buy their favorite shoe according to their choices and get it delivered.",
     "image": "StepUp-Field.png",
@@ -27,27 +47,6 @@
     "links": {
       "view": "https://timetrackerx.netlify.app/",
       "code": "https://github.com/SamanPradhan/TimeTrackerX"
-    }
-  },
-
-  {
-    "name": "AI Interview preparation platform",
-    "desc": "This website is a tech interview questions preparation platform which gives questions related to your choosen topic and gives feedback for your answer with help of OpenAI api",
-    "image": "spark-ai.png",
-    "stacks": "nodejs,express,mongodb,react,tailwind,git",
-    "links": {
-      "view": "https://spark-ai-interview.netlify.app/",
-      "code": "https://github.com/SamanPradhan/SparkAi"
-    }
-  },
-  {
-    "name": "Pizza ordering website - Pizza Town",
-    "desc": "This website is a clone of dominos.com which can be used to order fresh and tasty pizzas online.",
-    "image": "pizzatown.png",
-    "stacks": "js,html,css,git,netlify,vscode",
-    "links": {
-      "view": "https://pizzatown.netlify.app/",
-      "code": "https://github.com/SamanPradhan/PizzaPoint"
     }
   }
 ]
