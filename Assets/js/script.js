@@ -102,7 +102,11 @@ function showProjects(projects) {
      
         <div class="btns" >
           <a href="${project.links.view}" class="btn project-deployed-link"   target="_blank"><i class="fas fa-eye" id="works-icons-new"></i> View</a>
-          <a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code" id="works-icons-new"></i></a>
+          ${project.links.code ? 
+            `<a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code" id="works-icons-new"></i></a>` : 
+            ''
+          }
+
         </div>
 
         <div id="tech2" class="project-tech-stack"><img id="tech" style ="align: center" src="https://skillicons.dev/icons?i=${project.stacks}" alt="">
