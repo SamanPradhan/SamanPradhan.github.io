@@ -267,9 +267,9 @@ header .navbar ul li a:hover {
   font-size: 1.5rem;
   transition: 0.3s;
 }
-.home2 .btn:hover {
+/* .home2 .btn:hover {
   background: #1a047e;
-}
+} */
 .home2 .btn:hover i {
   transform: translateX(5px);
 }
@@ -434,9 +434,9 @@ header .navbar ul li a:hover {
   font-size: 1.2rem;
   transition: 0.3s;
 }
-.resumebtn .btn:hover {
+/* .resumebtn .btn:hover {
   background: #1a047e;
-}
+} */
 .resumebtn .btn:hover i {
   transform: translateX(5px);
 }
