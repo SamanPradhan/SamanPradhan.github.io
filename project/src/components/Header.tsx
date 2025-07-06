@@ -107,7 +107,7 @@ const Header = () => {
               <Mail size={20} />
             </a>
             <a
-              href="/resume.pdf"
+              href="/assets/Saman_Resume.pdf"
               download
               className="ml-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-sm"
             >
@@ -189,7 +189,7 @@ const Header = () => {
                   <Mail size={20} />
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href="/assets/Saman_Resume.pdf"
                   download
                   className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm flex items-center gap-2"
                 >

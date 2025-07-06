@@ -50,7 +50,7 @@ const Hero = () => {
               <ArrowDown size={20} />
             </button>
             <a
-              href="/src/Assets/Saman_Resume.pdf"
+              href="/assets/Saman_Resume.pdf"
               download
               className="border-2 border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-3 text-lg font-medium hover:bg-gray-800/50"
             >

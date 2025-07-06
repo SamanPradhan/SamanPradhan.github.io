@@ -140,7 +140,7 @@ const Footer = () => {
               </div>
               <div className="mt-6">
                 <a
-                  href="/resume.pdf"
+                  href="/assets/Saman_Resume.pdf"
                   download
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 text-sm"
                 >

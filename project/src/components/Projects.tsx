@@ -147,7 +147,7 @@ const Projects = () => {
               >
                 <div className="relative overflow-hidden h-64 rounded-xl">
                   <img
-                    src={`/Assets/images/projects/${project.image}`}
+                    src={`/assets/images/projects/${project.image}`}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
