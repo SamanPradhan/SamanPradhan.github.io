@@ -44,10 +44,10 @@ $(document).ready(function () {
 // document.addEventListener("visibilitychange", function () {
 //   if (document.visibilityState === "visible") {
 //     document.title = "Portfolio | Saman Ranjan Pradhan";
-//     $("#favicon").attr("href", "Assets/images/R.png");
+//     $("#favicon").attr("href", "assets/images/R.png");
 //   } else {
 //     document.title = "Come Back To Portfolio";
-//     $("#favicon").attr("href", "Assets/images/back.png");
+//     $("#favicon").attr("href", "assets/images/back.png");
 //   }
 // });
 
@@ -77,7 +77,7 @@ function showSkills(skills) {
     skillHTML += `
       <div class="bar">
             <div  class="info skills-card" id="skills-cards-small">
-              <img class="skills-card-img"  id="skills-cards-img" src="Assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
+              <img class="skills-card-img"  id="skills-cards-img" src="/assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
               <span class="skills-card-name" id="skills-cards-span" >${skill.name}</span>
             </div>
           </div>`;
@@ -86,7 +86,7 @@ function showSkills(skills) {
 }
 
 /* JavaScript code for generating project cards */
-// <img id="projectimage"  src="Assets/images/projects/${project.image}.png" alt="project" />
+// <img id="projectimage"  src="assets/images/projects/${project.image}.png" alt="project" />
 function showProjects(projects) {
   let projectsContainer = document.querySelector("#projects .box-container");
   let projectHTML = "";
@@ -95,21 +95,32 @@ function showProjects(projects) {
   <div class="box project-card" id="project-card-each">
    
   
-  <img id="projectimage"  src="Assets/images/projects/${project.image}" alt="project" />
+  <img id="projectimage"  src="assets/images/projects/${
+    project.image
+  }" alt="project" />
     <div id="project-card-each2">
-      <div class="tag"> <h3 class="project-title"  id="project-title-head">${project.name}</h3> </div>
-      <div class="desc"> <p class="project-description">${project.desc}</p>  <br>
+      <div class="tag"> <h3 class="project-title"  id="project-title-head">${
+        project.name
+      }</h3> </div>
+      <div class="desc"> <p class="project-description">${
+        project.desc
+      }</p>  <br>
      
         <div class="btns" >
-          <a href="${project.links.view}" class="btn project-deployed-link"   target="_blank"><i class="fas fa-eye" id="works-icons-new"></i> View</a>
-          ${project.links.code ? 
-            `<a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code" id="works-icons-new"></i></a>` : 
-            ''
+          <a href="${
+            project.links.view
+          }" class="btn project-deployed-link"   target="_blank"><i class="fas fa-eye" id="works-icons-new"></i> View</a>
+          ${
+            project.links.code
+              ? `<a href="${project.links.code}" class="btn project-github-link" target="_blank">Code <i class="fas fa-code" id="works-icons-new"></i></a>`
+              : ""
           }
 
         </div>
 
-        <div id="tech2" class="project-tech-stack"><img id="tech" style ="align: center" src="https://skillicons.dev/icons?i=${project.stacks}" alt="">
+        <div id="tech2" class="project-tech-stack"><img id="tech" style ="align: center" src="https://skillicons.dev/icons?i=${
+          project.stacks
+        }" alt="">
         </div>
 
       </div>
