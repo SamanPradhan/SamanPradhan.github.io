@@ -145,11 +145,11 @@ const Projects = () => {
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 transform hover:scale-[1.02] group"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden h-64 rounded-xl">
                   <img
-                    src={`/src/Assets/images/projects/${project.image}`}
+                    src={`/project/src/Assets/images/projects/${project.image}`}
                     alt={project.title}
-                    className="w-full h-84 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                   <div className="absolute top-4 right-4 flex gap-2">
@@ -166,7 +166,6 @@ const Projects = () => {
                     </span>
                   </div>
                 </div>
-
                 <div className="p-8">
                   <h3 className="text-2xl font-semibold text-white mb-4">
                     {project.title}
