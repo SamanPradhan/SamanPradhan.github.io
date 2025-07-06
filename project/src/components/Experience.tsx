@@ -51,7 +51,7 @@ const Experience = () => {
         "Node.js",
         "MongoDB",
         "GenAI",
-        "Langchai",
+        "Langchain",
         "Git",
         "Linux",
       ],
@@ -66,10 +66,8 @@ const Experience = () => {
       description:
         "Worked as a Full Stack Developer at inQbator, focusing on building and maintaining web applications using modern technologies.",
       achievements: [
-        "Spearheaded the development and integration of advanced AI features—AI-driven task creation, AI analytics, and a PDF AI-Query bot—leveraging Langchain, Vector DBs, similarity searches, and ML algorithms, with clients praising the feature and earning accolades from upper management.",
-        "Implemented enterprise-grade Single Sign-On using OKTA and EntraID, ensuring secure, seamless authentication and authorization for high-profile clients while reducing IT overhead and improving enterprise client experience.",
-        "Developed time tracking, management, and approval workflows, empowering users to efficiently monitor project durations, optimize productivity, and streamline inter-project coordination boosting their workflows.",
-        "Implemented performance optimizations for API endpoints handling form and file creation, achieving a 180% improvement in response times, thereby enhancing system scalability and overall user satisfaction",
+        "As the Founding Engineer, designed and developed a scalable backend architecture with full EC2 server setup, configuration, maintenance, and integrated PhonePe payment gateway for seamless financial transactions.",
+        "Built the initial phase of Electra AI model, an innovative solution targeting college students.",
       ],
       technologies: [
         "JavaScript",
