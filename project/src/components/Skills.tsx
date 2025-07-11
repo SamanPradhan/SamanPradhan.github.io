@@ -36,10 +36,14 @@ const Skills = () => {
           level: 90,
           description: "API design and implementation",
         },
-        { name: "Java", level: 80, description: "Object-oriented programming" },
+        {
+          name: "Typescript",
+          level: 60,
+          description: "Typed superset of JavaScript",
+        },
         {
           name: "C++",
-          level: 75,
+          level: 55,
           description: "Systems programming and algorithms",
         },
       ],
@@ -88,7 +92,7 @@ const Skills = () => {
         {
           name: "Linux",
           level: 80,
-          description: "Command line and system administration",
+          description: "Command line and server management",
         },
         {
           name: "Docker",
@@ -96,19 +100,19 @@ const Skills = () => {
           description: "Containerization and deployment",
         },
         {
-          name: "Webpack",
-          level: 70,
-          description: "Module bundling and optimization",
-        },
-        {
           name: "Jest",
-          level: 80,
+          level: 70,
           description: "JavaScript testing framework",
         },
         {
           name: "Postman",
           level: 85,
           description: "API testing and documentation",
+        },
+        {
+          name: "Webpack",
+          level: 50,
+          description: "Module bundling and optimization",
         },
       ],
     },
@@ -163,9 +167,9 @@ const Skills = () => {
           description: "ES6+, DOM manipulation, async programming",
         },
         {
-          name: "TypeScript",
+          name: "Streamlit",
           level: 75,
-          description: "Type-safe JavaScript development",
+          description: "Rapid web app development framework",
         },
         {
           name: "HTML5",
@@ -195,9 +199,9 @@ const Skills = () => {
           description: "Frontend deployment platform",
         },
         {
-          name: "Netlify",
+          name: "CircleCI",
           level: 80,
-          description: "Static site hosting and deployment",
+          description: "Continuous integration and deployment",
         },
         {
           name: "Heroku",

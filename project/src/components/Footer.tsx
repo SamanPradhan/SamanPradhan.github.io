@@ -18,11 +18,6 @@ const Footer = () => {
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
                 Saman Pradhan
               </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Software Engineer passionate about building innovative web
-                applications and creating solutions that make a positive impact.
-                Always eager to learn and take on new challenges.
-              </p>
               <div className="flex gap-4">
                 <a
                   href="https://github.com/samanpradhan"

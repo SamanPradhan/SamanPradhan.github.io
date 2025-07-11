@@ -92,7 +92,8 @@ const Contact = () => {
                     <p className="text-gray-400 text-sm">Email</p>
                     <a
                       href="mailto:pradhansaman2017@gmail.com"
-                      className="text-white hover:text-blue-400 transition-colors text-lg font-medium"
+                      className="text-white hover:text-blue-400 transition-colors text-lg font-medium break-words sm:text-base xs:text-sm"
+                      style={{ wordBreak: "break-word" }}
                     >
                       pradhansaman2017@gmail.com
                     </a>

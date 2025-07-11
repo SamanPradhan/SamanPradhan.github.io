@@ -29,11 +29,6 @@ const Hero = () => {
               Software Engineer
             </div>
 
-            <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed max-w-4xl mx-auto">
-              Passionate about building scalable web applications and innovative
-              solutions that drive business growth and enhance user experiences.
-            </p>
-
             <p className="text-lg text-gray-500 mb-12 max-w-3xl mx-auto">
               Experienced in full-stack development with expertise in React,
               Node.js, Python, and cloud technologies. Currently seeking new
