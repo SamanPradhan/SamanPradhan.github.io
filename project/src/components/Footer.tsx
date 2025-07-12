@@ -126,7 +126,7 @@ const Footer = () => {
                 </p>
                 <p>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+919330175007"
                     className="hover:text-white transition-colors"
                   >
                     +91 9330175007

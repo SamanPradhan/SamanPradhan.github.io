@@ -13,7 +13,7 @@ const Education = () => {
     {
       institution: "Vellore Institute of Technology (Online)",
       degree: "Master of Computer Applications",
-      graduation: "Expected - Aug,2027",
+      graduation: "Expected - 2027",
       location: "Vellore, TN",
       gpa: "Pursuing",
       coursework: [
@@ -29,7 +29,7 @@ const Education = () => {
     {
       institution: "University of Calcutta",
       degree: "Bachelor of Science in Mathematics, Computer Science",
-      graduation: "Aug,2024",
+      graduation: "August, 2024",
       location: "Kolkata, WB",
       gpa: "8.34/10.0",
       coursework: [

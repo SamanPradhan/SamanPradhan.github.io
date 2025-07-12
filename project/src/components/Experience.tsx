@@ -5,6 +5,8 @@ const Experience = () => {
   const experiences = [
     {
       company: "EZ Works",
+      website: "https://ez.works",
+      logo: "/assets/images/ezworks-logo.jpeg",
       position: "Backend Developer",
       duration: "October 2024 – Present",
       location: "Gurugram, India",
@@ -33,6 +35,8 @@ const Experience = () => {
     },
     {
       company: "Sketchnote",
+      website: "https://sketchnote.co",
+      logo: "/assets/images/sketchnote-logo.jpg",
       position: "Software Developer",
       duration: "December 2023 – April 2024",
       location: "Remote",
@@ -59,6 +63,8 @@ const Experience = () => {
     },
     {
       company: "inQbator",
+      website: "https://inqbator.in",
+      logo: "/assets/images/inqbator-logo.jpg",
       position: "Full Stack Developer",
       duration: "August 2023 – November 2024",
       location: "Remote",
@@ -113,14 +119,33 @@ const Experience = () => {
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-8">
                   <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center gap-4 mb-2">
                       <div className="p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30">
-                        <Briefcase className="w-6 h-6 text-blue-400" />
+                        {/* <Briefcase className="w-6 h-6 text-blue-400" /> */}
+                        <a
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:underline"
+                        >
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            className="w-12 h-12 rounded-lg object-cover"
+                          />
+                        </a>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold text-white">
-                          {exp.company}
-                        </h3>
+                        <a
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:underline"
+                        >
+                          <h3 className="text-2xl font-semibold text-white">
+                            {exp.company}
+                          </h3>
+                        </a>
                         <div className="flex items-center gap-3 mt-1">
                           <span
                             className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -160,10 +185,6 @@ const Experience = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h5 className="text-lg font-medium text-white mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                    Key Achievements
-                  </h5>
                   <ul className="space-y-3">
                     {exp.achievements.map((achievement, i) => (
                       <li
