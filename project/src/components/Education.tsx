@@ -11,7 +11,7 @@ import {
 const Education = () => {
   const education = [
     {
-      institution: "Vellore Institute of Technology (Online)",
+      institution: "Vellore Institute of Technology",
       degree: "Master of Computer Applications",
       graduation: "Expected - 2027",
       location: "Vellore, TN",
@@ -19,11 +19,13 @@ const Education = () => {
       coursework: [
         "Data Structures and Algorithms",
         "Software Engineering",
+        "Computer Architecture",
         "Database Systems",
         "Computer Networks",
         "Operating Systems",
         "Machine Learning Fundamentals",
         "Computer Graphics",
+        "Discrete Mathematics",
       ],
     },
     {

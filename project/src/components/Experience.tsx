@@ -14,11 +14,13 @@ const Experience = () => {
       description:
         "Working as a Backend Developer at EZ Works, focusing on building scalable and efficient backend systems for various applications.",
       achievements: [
-        "Managed and enhanced a scalable microservices architecture with 8+ services for the CAT tool TR42.ai leveraging async frameworks to optimize translation workflows, reduce latency, and improve reliability.",
-        "Developed a real-time chat microservice for creating and disabling chat groups across multiple complex trigger points in business logic, delivering 1000+ msg/sec via low-latency WebSocket communication and leveraging Redis Pub/Sub, Matrix, FastAPI, and optimized indexing for scalability.",
-        "Engineered scalable microservices for background priority task management using a translation model, Celery, and Redis, which reduced API response times by 40%, increased capacity by 50% with Kubernetes & KEDA, and optimized GPU cost efficiency.",
-        "Optimized sentence-splitting architecture and TM management, enhancing fuzzy matching and reducing lookup times across millions of entries, improving response time by 200% and improving user experience .",
-        "Optimized Redis caching for TM retrieval and sentence segmentatiot",
+        "Optimized inter-service communication between 8+ microservices for TR42.ai with multi-level Celery task pipelines and event-driven messaging, cutting complexity and speeding up development.",
+        "Redesigned the translation pipeline by refactoring the inference codebase, migrating GPU workloads off EC2 to newer cost-effective platform, and engineering a scalable central task management microservice, resulting in 40% lower infra cost, 50% higher capacity, and significantly faster model deployments.",
+        "Developed a real-time chat microservice for creating and disabling chat groups across multiple complex trigger points in business logic, delivering 1000+ msg/sec via WebSocket and leveraging Redis Pub/Sub, FastAPI.",
+        "Built a production-grade AI chatbot using LLMs & custom datasets, orchestrating multi-agent workflows in LangGraph and integrating with WhatsApp API for seamless, real-time user engagement. streamlined data pipelines, and custom memory modules.",
+        "Built a centralized error handler using Pub/Sub with CloudWatch logging & monitoring, cutting debugging time by 25% and boosting incident response across the whole distributed system.",
+        "Optimized sentence-splitting architecture and TM management, enhancing fuzzy matching and reducing lookup times across millions of entries, improving response time by 200% and improving user experience.",
+        "Optimized Redis caching for file path of translated output file generation and sentence segmentation, reducing output generation speed by 20% and server costs by 25%.",
       ],
       technologies: [
         "Python",
@@ -156,11 +158,11 @@ const Experience = () => {
                           >
                             {exp.type}
                           </span>
-                          {exp.current && (
+                          {/* {exp.current && (
                             <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm font-medium border border-green-500/30">
                               Current
                             </span>
-                          )}
+                          )} */}
                         </div>
                       </div>
                     </div>
