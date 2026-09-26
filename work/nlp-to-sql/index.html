@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saman Pradhan — Asking 200M rows a question in English</title>
+<meta name="description" content="Case study. NLP-to-SQL over 200M+ attendance records at Truein, where a wrong answer is a wrong paycheck. A four-layer hallucination defense, identity-isolated mapping, and why accuracy had to be a number before it was a feature.">
+<meta property="og:title" content="Saman Pradhan — Asking 200M rows a question in English">
+<meta property="og:description" content="NLP-to-SQL over attendance data, where a wrong answer is a wrong paycheck. Why accuracy had to be a number before it was a feature.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://samanpradhan.github.io/work/nlp-to-sql/">
+<link rel="canonical" href="https://samanpradhan.github.io/work/nlp-to-sql/">
+<meta name="theme-color" content="#F2EFE6">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to entries</a>
+<div class="page">
+
+  <header class="site-head">
+    <a href="/" class="brand">Saman Pradhan</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/work/" aria-current="page">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="clock">
+      <span class="stamp">IN</span>
+      <span data-clock aria-live="off" aria-label="Current time in Pune">00:00:00</span>
+      <span class="ink2 tz">IST</span>
+    </div>
+  </header>
+
+  <main id="main" class="index-wrap case">
+    <article>
+
+    <section class="g case-hero" aria-labelledby="case-h">
+      <div class="meta c1-3">
+        <div class="kv"><span class="label">Entry 001</span><span>IN&nbsp;&nbsp;Jan 2026</span><span>OUT Apr 2026</span></div>
+        <div class="kv"><span class="label">At</span><span>Truein</span></div>
+        <div class="kv"><span class="label">Role</span><span>Architect, sole backend</span></div>
+        <div class="kv"><span class="label">Read</span><span>6 min</span></div>
+      </div>
+      <div class="case-title-wrap c3-12">
+        <h1 id="case-h" class="case-h">Letting people ask a 200-million-row database a question in English</h1>
+        <p class="standfirst">NLP-to-SQL over attendance data, where a wrong answer is a wrong paycheck. Why accuracy had to be a number before it was a feature.</p>
+      </div>
+    </section>
+
+    <section class="sec body" aria-labelledby="s1">
+      <h2 id="s1" class="label gut">01 · Context</h2>
+      <div class="col">
+        <p>Truein records attendance for contract and multi-site workforces: every punch, shift, leave and correction, for every worker, at every site. That is 200M+ records spread over five tables that have to be joined to answer anything useful.</p>
+        <p>The questions customers actually ask are ordinary: <em>who was late more than three times last month at the Andheri site; which contractors billed hours nobody scheduled.</em> Each one used to become a report request and a wait. The brief was to let an admin type the question and get the number.</p>
+      </div>
+      <aside class="marg">
+        <p class="margin-note">Two features came out of this: AI Analytics (ask a question) and AI TimeGuard.</p>
+      </aside>
+    </section>
+
+    <section class="sec body" aria-labelledby="s2">
+      <h2 id="s2" class="label gut">02 · Problem</h2>
+      <div class="col">
+        <p>A language model will write SQL for anything you ask, with equal confidence whether the SQL is right or not. Over five joined tables the ways to be wrong multiply: a missed join condition doubles a count; a wrong date column shifts a whole month; a plausible column name that doesn't exist fails loudly, but one that exists and means something else fails silently.</p>
+        <p>The data is also multi-tenant. The model must never see, name or query another company's records, and it must never be the thing enforcing that.</p>
+        <p>And people are referred to by name. &ldquo;Rajesh&rdquo; might be four workers across two sites, spelled three ways in the source systems. A text-to-SQL answer about the wrong Rajesh is worse than no answer.</p>
+      </div>
+      <aside class="marg">
+        <p class="margin-note">The failure mode that matters here isn't &ldquo;no answer.&rdquo; It's a confident wrong number that ends up on a payslip.</p>
+      </aside>
+    </section>
+
+    <section class="sec body" aria-labelledby="s3">
+      <h2 id="s3" class="label gut">03 · Constraints</h2>
+      <div class="col">
+        <p>Real time: an answer had to come back while the admin was still looking at the screen, over the live 200M-row store, not a warehouse copy. Cost: every query is a model call plus a database scan, and both are billed. Tenancy isolation had to be structural, not prompt-based. And it had to run inside the existing NestJS backend and Aurora setup — no new data platform.</p>
+        <p>I set one more: accuracy would be measured on a fixed set of real questions before launch, and the number would be shown to the business, not asserted.</p>
+      </div>
+    </section>
+
+    <section class="sec body" aria-labelledby="s4">
+      <h2 id="s4" class="label gut">04 · What I built</h2>
+      <div class="col" style="display: flex; flex-direction: column; gap: 28px">
+        <div>
+          <p><strong>A four-layer hallucination defense.</strong> The model's output is treated as a proposal, not a query. Each layer can reject it, and a rejection is returned as &ldquo;I can't answer that reliably&rdquo; rather than a guess.</p>
+          <div class="layers">
+            <div class="layer"><span class="n">L1</span><p>Schema grounding. The model sees a curated view of the schema — the tables, joins and column meanings that are allowed — not the raw database.</p></div>
+            <div class="layer"><span class="n">L2</span><p>Static validation. The generated SQL is parsed and checked against that view: only known tables, only permitted joins, read-only, tenant filter present.</p></div>
+            <div class="layer"><span class="n">L3</span><p>Guarded execution. Queries run under a scoped role with row limits and timeouts, so a bad query is slow and empty, never expensive or broad.</p></div>
+            <div class="layer"><span class="n">L4</span><p>Answer verification. The result is checked back against the question — shape, units, date range — before it's phrased for the user.</p></div>
+          </div>
+        </div>
+        <p><strong>Identity-isolated mapping.</strong> The model never handles real identifiers. Tenant, site and staff identity are resolved outside the model and passed in as opaque handles; the tenant filter is injected by the system, not written by the model. Isolation holds even if the prompt is wrong.</p>
+        <p><strong>Name resolution with Jaro–Winkler.</strong> &ldquo;Rajesh at Andheri&rdquo; is resolved to candidate records by an optimised similarity search before any SQL is written. One clear match proceeds; several matches become a clarifying question; none becomes an honest no.</p>
+      </div>
+      <aside class="marg">
+        <p class="margin-note">The layers are cheap in the order they run. Most bad queries die at L2, before a single row is read.</p>
+      </aside>
+    </section>
+
+    <section class="sec body" aria-labelledby="s5">
+      <h2 id="s5" class="label gut">05 · What happened</h2>
+      <div class="col" style="display: flex; flex-direction: column; gap: 32px">
+        <p>90%+ accuracy on the evaluation set, live over the full store, at a latency an admin will wait for. The refusal path turned out to be the feature people trusted: the system says no often enough that its yes means something.</p>
+        <div class="recs">
+          <div class="rec rec--head">
+            <span class="label">Reconciliation</span><span class="label">Scheduled</span><span class="label">Actual</span><span class="label red">Variance</span>
+          </div>
+          <div class="rec"><span>Accuracy target</span><span>93%</span><span>90%+</span><span class="red">−3</span></div>
+          <div class="rec"><span>Records in scope</span><span>Live store</span><span>200M+ · 5 tables</span><span class="red">—</span></div>
+          <div class="rec"><span>Cross-tenant leaks</span><span>0</span><span>0</span><span class="red">0</span></div>
+          <div class="rec rec--foot"><span>Report requests to support</span><span>40 / month</span><span>15 / month</span><span class="red">−63%</span></div>
+          <p class="label plain rec-note">Scheduled is what the brief asked for. Actual is what shipped.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec body" aria-labelledby="s6">
+      <h2 id="s6" class="label gut">06 · What I'd do differently</h2>
+      <div class="col">
+        <p>Build the evaluation set on day one, from real support tickets, before writing a prompt. I built it in week 12, and every week before that was guesswork dressed as progress.</p>
+        <p>Start narrower. The first version accepted any question; a version that accepted twenty question shapes and did them perfectly would have shipped sooner and taught me more about the twenty-first.</p>
+      </div>
+    </section>
+
+    </article>
+
+    <nav class="g next" aria-label="Entries">
+      <span class="label c1-3">Next entry</span>
+      <div class="next-body c3-9">
+        <a href="/work/#e006" class="next-t">006 · Moving GPU inference off EC2 &rarr;</a>
+        <span class="next-p">Infra −47%, capacity +125%, at EZ Lab.</span>
+      </div>
+      <a href="/work/" class="next-index c10-13">Full index</a>
+    </nav>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-row">
+      <div class="foot-clock">
+        <span class="stamp out">OUT</span>
+        <span data-clock aria-live="off">00:00:00</span>
+        <span class="ink2 d-only">IST · <span data-elapsed>00:00</span> on this page</span>
+        <span class="ink2 m-only">· <span data-elapsed>00:00</span> here</span>
+      </div>
+      <div class="foot-links">
+        <a href="mailto:pradhansaman2017@gmail.com"><span class="d-only">pradhansaman2017@gmail.com</span><span class="m-only">Email</span></a>
+        <a href="https://github.com/SamanPradhan">GitHub</a>
+        <a href="https://www.linkedin.com/in/samanpradhan">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
