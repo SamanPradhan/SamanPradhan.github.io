@@ -34,6 +34,13 @@
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
+    <div class="folio" aria-hidden="true">
+      <span class="folio-item" data-t="hero"><span class="label">Fol.</span><span class="big">000</span></span>
+      <span class="folio-item" data-t="skills"><span class="label">Fol.</span><span class="big">Skills</span></span>
+      <span class="folio-item" data-t="edu"><span class="label">Fol.</span><span class="big">Education</span></span>
+      <span class="folio-item" data-t="band"><span class="label">Fol.</span><span class="big">04–07</span></span>
+      <span class="folio-item" data-t="log"><span class="label">Fol.</span><span class="big">Log</span></span>
+    </div>
     <div class="clock">
       <span class="stamp">IN</span>
       <span data-clock aria-live="off" aria-label="Current time in Pune">00:00:00</span>
@@ -45,6 +52,8 @@
   <main id="main">
 
     <section class="hero" aria-labelledby="hero-h">
+      <span class="hero-sentinel" aria-hidden="true"></span>
+      <div class="hero-stamp" aria-hidden="true"><span class="big">IN</span><span class="small">Entry 000 · <span data-punched>00:00:00</span> IST</span></div>
       <div class="g">
         <div class="label hero-meta c1-3">
           <span>Entry 000</span>
@@ -67,11 +76,11 @@
         <div class="vals c3-13">
           <div class="val">
             <span class="figure"><span class="fig" style="--to: 90"><span class="s">90</span></span><span class="red">%+</span></span>
-            <span class="val-desc">AI features with a number attached. NLP-to-SQL over 200M rows, accuracy measured before launch.</span>
+            <span class="val-desc">Advanced Generative AI with a number attached. NLP-to-SQL over 200M rows, accuracy measured before launch.</span>
           </div>
           <div class="val">
             <span class="figure"><span class="red">−</span><span class="fig" style="--to: 47"><span class="s">47</span></span><span class="red">%</span></span>
-            <span class="val-desc">Infra bills that go down. GPU inference moved off EC2; a 200M-row table partitioned, queries 55% faster.</span>
+            <span class="val-desc">Infra bills that go down at EZ Lab. GPU inference moved off EC2; a 200M-row table partitioned, queries 65% faster.</span>
           </div>
           <div class="val">
             <span class="figure"><span class="fig" style="--to: 10"><span class="s">10</span></span><span class="red">+</span></span>
@@ -103,7 +112,7 @@
       <div class="row">
         <span class="label row-label c1-3">Working<span class="m-only"> · shipped once</span></span>
         <div class="sk-list c3-13">
-          <div class="sk"><span class="label k">Platform</span><span class="items">Kubernetes, Terraform, GitHub Actions, Grafana and OpenTelemetry</span><button type="button" class="where" aria-describedby="pw-1">Where</button><span class="proof" id="pw-1">Kubernetes with ArgoCD deploys at Truein · Terraform and GitHub Actions on own-time projects · Grafana and OpenTelemetry alongside CloudWatch at EZ Lab</span></div>
+          <div class="sk"><span class="label k">Platform</span><span class="items">Kubernetes, Terraform, GitHub Actions, Grafana and OpenTelemetry</span><button type="button" class="where" aria-describedby="pw-1">Where</button><span class="proof" id="pw-1">Terraform and GitHub Actions on own-time projects · Kubernetes with ArgoCD deploys at EZ Lab.</span></div>
           <div class="sk"><span class="label k">Systems</span><span class="items">Kafka, gRPC, GraphQL, Go · system design for multi-tenant SaaS</span><button type="button" class="where" aria-describedby="pw-2">Where</button><span class="proof" id="pw-2">Multi-tenant isolation design at Truein · Event-driven messaging across 8 services at EZ Lab · Kafka, gRPC and Go on own-time services</span></div>
           <div class="sk"><span class="label k">AI</span><span class="items">Fine-tuning with LoRA, pgvector, LLM evals and guardrails, speech in and out</span><button type="button" class="where" aria-describedby="pw-3">Where</button><span class="proof" id="pw-3">Four-layer hallucination defense and GPT STT/TTS at Truein · LoRA fine-tuning on the proprietary chatbot dataset at EZ Lab</span></div>
           <div class="sk"><span class="label k">Security</span><span class="items">SOC 2, GDPR, ISO 27001 remediation · SSO with Okta and Entra ID</span><button type="button" class="where" aria-describedby="pw-4">Where</button><span class="proof" id="pw-4">Audit-gap remediation with Scrut.io at Truein · Okta and Entra ID SSO at Sketchnote</span></div>
@@ -112,7 +121,7 @@
       <div class="row row--end">
         <span class="label row-label c1-3">Learning<span class="m-only"> · Q4 2026</span></span>
         <div class="sk-list c3-13">
-          <div class="sk"><span class="label k d-only">Q4 2026</span><span class="items">Rust, Kubernetes operators, model serving with vLLM</span><span></span></div>
+          <div class="sk"><span class="label k d-only">Q4 2026</span><span class="items">Kubernetes operators, model serving with vLLM</span><span></span></div>
         </div>
       </div>
     </section>
@@ -155,7 +164,8 @@
 
   </main>
 
-  <footer class="site-foot">
+  <footer class="site-foot site-foot--home">
+    <span class="foot-stamp" aria-hidden="true">OUT</span>
     <div class="foot-row foot-row--home">
       <div class="foot-clock">
         <span class="stamp out">OUT</span>

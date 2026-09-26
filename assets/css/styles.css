@@ -62,7 +62,7 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
 
 /* ---------- 3 · Header ---------- */
 .site-head{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"name nav clock";align-items:baseline;column-gap:24px;padding:28px 64px 24px;border-bottom:1px solid var(--ink)}
-.site-head--home{grid-template-columns:auto 1fr auto auto;grid-template-areas:"name nav clock cta";align-items:center;padding:20px 64px;position:sticky;top:0;background:var(--paper);z-index:2}
+.site-head--home{grid-template-columns:auto 1fr auto auto auto;grid-template-areas:"name nav folio clock cta";align-items:center;padding:20px 64px;position:sticky;top:0;background:var(--paper);z-index:2}
 .brand{grid-area:name;font-family:var(--mono);font-size:13px;line-height:20px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-weight:500}
 .nav{grid-area:nav;justify-self:center;display:flex;gap:32px;font-family:var(--mono);font-variant-numeric:tabular-nums slashed-zero;font-size:13px;line-height:20px;letter-spacing:.04em}
 .nav a{text-decoration:none}
@@ -143,10 +143,22 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
 .tape .fill{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;clip-path:inset(0 0 0 0)}
 .tape .fill span{background:var(--stamp);border-color:var(--stamp)}
 
-.hero{padding:72px 64px 56px;display:flex;flex-direction:column;gap:40px}
+.hero{position:relative;overflow:clip;padding:72px 64px 56px;display:flex;flex-direction:column;gap:40px}
+/* an invisible 120px marker just above the hero: its passage under the header times the IN stamp */
+.hero-sentinel{position:absolute;left:0;top:-80px;width:1px;height:120px;pointer-events:none}
+/* the IN stamp (hero) and OUT stamp (footer): rubber-stamp ink, multiplied over the page */
+.hero-stamp{position:absolute;left:62%;top:22%;z-index:1;display:inline-flex;flex-direction:column;align-items:center;gap:4px;padding:10px 36px 16px;border:6px solid var(--stamp);color:var(--stamp);font-family:var(--mono);font-variant-numeric:tabular-nums slashed-zero;text-transform:uppercase;white-space:nowrap;transform:translate(-50%,-50%) rotate(-8deg);pointer-events:none;mix-blend-mode:multiply;opacity:.82}
+.hero-stamp .big{font-size:150px;line-height:.9;font-weight:500;letter-spacing:.04em}
+.hero-stamp .small{font-size:14px;line-height:20px;letter-spacing:.14em;font-weight:500}
+.site-foot--home{position:relative;overflow:clip;padding-bottom:120px}
+.foot-stamp{position:absolute;right:0;bottom:12px;z-index:1;padding:4px 22px 8px;border:5px solid var(--stamp);color:var(--stamp);font-family:var(--mono);font-size:96px;line-height:1;font-weight:500;letter-spacing:.06em;transform:rotate(6deg);pointer-events:none;mix-blend-mode:multiply;opacity:.82}
+/* folio: the running head in the sticky header that names the entry you are reading */
+.folio{grid-area:folio;position:relative;width:150px;height:40px;pointer-events:none;font-family:var(--mono);font-variant-numeric:tabular-nums slashed-zero;display:none}
+.folio-item{position:absolute;right:0;top:0;height:40px;display:flex;align-items:baseline;gap:8px;opacity:0;white-space:nowrap;padding-top:10px}
+.folio-item .big{font-size:20px;line-height:20px;font-weight:500;letter-spacing:.02em}
 .hero-meta{display:flex;flex-direction:column;gap:6px;padding-top:12px}
 .hero-h{font-size:clamp(44px,6.25vw,80px);line-height:.98;font-weight:400;letter-spacing:-.015em;text-wrap:pretty}
-.w{display:inline-block;font-weight:400;transition:font-weight 220ms ease-out,font-style 0s}
+.w{display:inline-block;font-weight:var(--hw,400);transition:font-weight 220ms ease-out,font-style 0s}
 .w:hover{font-weight:600;font-style:italic}
 .hero-lead{font-size:22px;line-height:30px;text-wrap:pretty}
 .hero-links{display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-variant-numeric:tabular-nums slashed-zero;font-size:13px;line-height:20px;align-self:end}
@@ -327,7 +339,12 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
   .where{min-height:44px;cursor:pointer}
 
   /* home */
-  .tape,.ruler{display:none}
+  .tape,.ruler,.folio{display:none!important}
+  .hero-stamp{left:58%;top:24%;border-width:4px;padding:6px 20px 10px;gap:2px}
+  .hero-stamp .big{font-size:84px}
+  .hero-stamp .small{font-size:11px;line-height:16px;letter-spacing:.1em}
+  .site-foot--home{padding-bottom:96px}
+  .foot-stamp{font-size:60px;border-width:4px;bottom:16px;padding:2px 14px 6px}
   .hero{padding:36px 20px 32px;gap:22px}
   .hero .g{gap:22px}
   .hero-meta{flex-direction:row;flex-wrap:wrap;gap:0;padding-top:0}
@@ -450,13 +467,14 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
 
 /* keyframes shared by the scroll-driven items */
 @keyframes rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes liftV{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes write{from{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-6px)}to{opacity:1;clip-path:inset(0 0 0 0);transform:none}}
 @keyframes tape{from{background-position-x:0}to{background-position-x:-1152px}}
 @keyframes pour{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes settle{from{transform:translateY(28px)}to{transform:none}}
 @keyframes fillTape{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
 @keyframes press{from{transform:scale(1.6) rotate(-8deg);opacity:0}70%{transform:scale(.96) rotate(-3deg);opacity:1}to{transform:scale(1) rotate(-3deg)}}
 @property --n{syntax:"<integer>";inherits:false;initial-value:0}
+@property --hw{syntax:"<number>";inherits:true;initial-value:400}
 @keyframes countLoad{from{--n:0}to{--n:var(--to)}}
 @keyframes count{from{--n:0}to{--n:var(--to)}}
 
@@ -473,12 +491,69 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
   /* 7 · tick ruler slides with scroll, like tape through a reader */
   .ruler{animation:tape linear both;animation-timeline:scroll(root)}
 
-  /* 8 · ledger rows rule themselves in as you read */
+  /* 8 · ledger rows rule themselves in, then are written in left to right */
   .row::before,.entry::before{animation:rule linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
-  .row>*,.entry>*{animation:liftV linear both;animation-timeline:view();animation-range:entry 5% entry 40%}
+  .row>*,.entry>*{animation:write linear both;animation-timeline:view();animation-range:entry 5% entry 45%}
 
   /* 10 · the ink band pours in from the top as it arrives */
   .ink{animation:pour linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+
+  /* ---- 17 · The Log, pressed (Home). Named view timelines let the header,
+     the stamps and the folio follow sections they are not inside of. ---- */
+  @supports (timeline-scope: --a) {
+    body{timeline-scope:--press,--hero,--hero-c,--skills-c,--edu-c,--band,--band-c,--log-c,--foot}
+    .hero-sentinel{view-timeline-name:--press}
+    /* the -c timelines see only a thin band at the middle of the screen: a section
+       owns the folio while it crosses that line, so two never show at once */
+    .hero{view-timeline-name:--hero,--hero-c;view-timeline-inset:auto,45% 45%}
+    .skills{view-timeline-name:--skills-c;view-timeline-inset:45% 45%}
+    .edu{view-timeline-name:--edu-c;view-timeline-inset:45% 45%}
+    .ink{view-timeline-name:--band,--band-c;view-timeline-inset:auto,45% 45%}
+    .log{view-timeline-name:--log-c;view-timeline-inset:45% 45%}
+    .site-foot{view-timeline-name:--foot}
+
+    /* 17a · the IN stamp comes down as soon as you leave the top */
+    @keyframes pressIn{from{opacity:0;transform:translate(-50%,-50%) scale(2.8) rotate(-16deg)}65%{opacity:.82;transform:translate(-50%,-50%) scale(.95) rotate(-7deg)}to{opacity:.82;transform:translate(-50%,-50%) scale(1) rotate(-8deg)}}
+    .hero-stamp{animation:pressIn linear both;animation-timeline:--press;animation-range:exit 0% exit 100%}
+    /* 17b · the headline's ink bleeds heavier, and the hero sheet files itself away */
+    @keyframes bleed{to{--hw:600}}
+    .hero-h{animation:bleed linear both;animation-timeline:--press;animation-range:exit 0% exit 100%}
+    @keyframes file{0%,35%{transform:none;opacity:1}100%{transform:scale(.95) translateY(56px);opacity:.2}}
+    .hero{animation:file linear both;animation-timeline:--hero;animation-range:exit 0% exit 100%;transform-origin:50% 0}
+
+    /* 17c · the sticky header dips into the ink band while the band passes under it */
+    @keyframes dip{0%{background:var(--paper);color:var(--ink);border-bottom-color:var(--ink)}4%,96%{background:var(--ink);color:var(--paper);border-bottom-color:var(--paper)}100%{background:var(--paper);color:var(--ink);border-bottom-color:var(--ink)}}
+    @keyframes dipStamp{0%{color:var(--stamp);border-color:var(--stamp)}4%,96%{color:var(--stamp-on-ink);border-color:var(--stamp-on-ink)}100%{color:var(--stamp);border-color:var(--stamp)}}
+    @keyframes dipMuted{0%{color:var(--ink-2)}4%,96%{color:var(--ink-2-on-ink)}100%{color:var(--ink-2)}}
+    @keyframes dipCta{0%{background:var(--ink);color:var(--paper)}4%,96%{background:var(--paper);color:var(--ink)}100%{background:var(--ink);color:var(--paper)}}
+    @keyframes dipCtaB{0%{color:var(--paper)}4%,96%{color:var(--ink)}100%{color:var(--paper)}}
+    .site-head--home{animation:dip linear;animation-timeline:--band;animation-range:exit -10% exit 90%}
+    .site-head--home .stamp{animation:dipStamp linear;animation-timeline:--band;animation-range:exit -10% exit 90%}
+    .site-head--home .tz,.site-head--home .folio .label{animation:dipMuted linear;animation-timeline:--band;animation-range:exit -10% exit 90%}
+    .site-head--home .cta{animation:dipCta linear;animation-timeline:--band;animation-range:exit -10% exit 90%}
+    .site-head--home .cta .b{animation:dipCtaB linear;animation-timeline:--band;animation-range:exit -10% exit 90%}
+
+    /* 17d · the folio flips as each section crosses the middle of the screen */
+    .folio{display:block}
+    @keyframes folio{0%{opacity:0;transform:translateY(10px)}6%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-10px)}}
+    .folio-item{animation:folio linear both;animation-range:entry-crossing 0% entry-crossing 100%}
+    .folio-item[data-t="hero"]{animation-timeline:--hero-c}
+    .folio-item[data-t="skills"]{animation-timeline:--skills-c}
+    .folio-item[data-t="edu"]{animation-timeline:--edu-c}
+    .folio-item[data-t="band"]{animation-timeline:--band-c}
+    .folio-item[data-t="log"]{animation-timeline:--log-c}
+
+    /* 17e · the OUT stamp comes down on the footer */
+    @keyframes pressOut{from{opacity:0;transform:scale(2.6) rotate(14deg)}65%{opacity:.82;transform:scale(.95) rotate(5deg)}to{opacity:.82;transform:scale(1) rotate(6deg)}}
+    .foot-stamp{animation:pressOut linear both;animation-timeline:--foot;animation-range:entry 20% entry 100%}
+
+    /* on a phone the hero is tall and its figures are read while leaving: the stamp and the
+       bleed still play, but the sheet does not fade under the reader */
+    @media (max-width:899.98px){
+      .hero{animation:none;transform:none}
+      .hero-stamp{left:58%;top:19%}
+    }
+  }
   /* 11 · numerals settle a beat after the text */
   .num-wrap{animation:settle linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
 
@@ -494,4 +569,7 @@ code,.code{font-family:var(--mono);font-size:16px;background:#E9E5D9;padding:1px
   *,*::before,*::after{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
   .fig,.num{--n:var(--to)}
   .sk .proof{max-height:none;opacity:1;padding-top:6px}
+  .folio{display:none!important}
+  .hero-stamp,.foot-stamp{opacity:.82!important}
+  .site-head--home{grid-template-columns:auto 1fr auto auto;grid-template-areas:"name nav clock cta"}
 }

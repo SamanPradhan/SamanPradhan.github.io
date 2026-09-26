@@ -48,6 +48,9 @@
   tick();
   setInterval(tick, 1000);
 
+  // The IN stamp on the home page records the moment you arrived. Written once.
+  write(document.querySelectorAll('[data-punched]'), now());
+
   // 404 page: log the address that was asked for. Nothing is sent anywhere.
   var reqPath = document.querySelector('[data-path]');
   if (reqPath) reqPath.textContent = location.pathname + location.search;
